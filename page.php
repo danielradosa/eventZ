@@ -42,7 +42,7 @@ if (have_posts()) :
           </div>
         </label>
       </div>
-        <article class="post-page">
+        <!-- <article class="post-page">
    
             <!-- CONTENT -->
             <div class="separator">
@@ -67,7 +67,7 @@ if (have_posts()) :
 
             </div>
 
-        </article>
+        </article> -->
 
 <?php endwhile;
 else :
