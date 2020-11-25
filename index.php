@@ -1,24 +1,37 @@
 <?php get_header();
 
 if (have_posts()) :
-    while (have_posts()) : the_post(); ?> 
+    while (have_posts()) : the_post(); ?>
 
 
-   
-      <a href="<?php the_permalink() ?>">
+    <div class="post">
+        <h1>
+            <a href="<?php the_permalink() ?>">
                 <?php the_title() ?>
-                <?php echo get_the_excerpt(); ?>
+            </a>
+        </h1>
+        <span>
+            <div class="content">
+                <<?php if($post->post_excerpt){ ?>
+        <p>
+            <?php echo get_the_excerpt(); ?>
             <a href="<?php the_permalink(); ?>">
                 Read the post&raquo;
             </a>
-            <?php the_post_thumbnail('small-thumbnail'); ?>
+        </p>
+                <?php the_post_thumbnail('small-thumbnail'); ?>
             </div>
             <span class="post__author"><?php the_author() ?></span>
             <br>
             <span class="post__date">
                 <?php the_date() ?> @ <?php the_time() ?> 
             </span>
-            <?php } else {
+        </span>
+    </div>
+    
+
+
+<?php } else {
     the_content();
 } ?>
 <?php endwhile;
