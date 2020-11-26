@@ -2,10 +2,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: #1A1F2B;
 }
 //NAVIGATION
 .navigation {
-  height: 100vh;
+  height: 110vh;
   margin: -0px 0 0 0;
   width: 100px;
   display: flex;
@@ -13,10 +14,12 @@ body {
   justify-content: space-evenly;
   pointer-events: none;
   position: fixed;
-  background-color: black;
-  color: #fff;
+  background-image: linear-gradient(to right, #482569 ,#2A46B2);
+  color: rgba($color: #ffffff, $alpha: .5);
   font-size: 200px;
   cursor: pointer;
+  margin-top: -100px;
+  transition: .3s ease-in-out;
 }
 .menu {
   display: none;
@@ -30,19 +33,20 @@ body {
   display: grid;
   color: #fff;
   place-items: center;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 2rem;
+  transform: rotate(-90deg);
+  font-size: 1.6rem;
   pointer-events: auto;
+  transition: .3s ease-in;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .nav-button:hover {
-  writing-mode: horizontal-tb;
-  text-orientation: mixed;
-  transition: 1s ease-in;
+  transform: rotate(0deg);
+
 }
 .navigation:hover {
   width: 150px;
-  transition: 1s ease-in-out;
+  
 }
 //  HOME PAGE
 .page-container {
