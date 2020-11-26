@@ -7,7 +7,7 @@ body {
 
 .navigation {
   height: 110vh;
-  margin: -0px 0 0 0;
+  margin: 0px 0 0 0;
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ body {
   font-size: 200px;
   cursor: pointer;
   margin-top: -100px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .menu {
@@ -38,7 +38,7 @@ body {
   transform: rotate(-90deg);
   font-size: 1.6rem;
   pointer-events: auto;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -153,9 +153,11 @@ body {
   .navigation {
     display: none;
   }
+
   #toggle {
     display: none;
   }
+
   .menu {
     margin: 0 auto;
     display: block;
@@ -165,8 +167,9 @@ body {
     margin-top: -25px;
     bottom: 0;
     transform: translate(42vmin, 45vh);
-    position: fixed;
+    position: absolute;
   }
+
   .btn {
     width: 70px;
     height: 70px;
@@ -174,10 +177,12 @@ body {
     position: absolute;
     overflow: hidden;
   }
+
   .material-icons.md-36 {
     font-size: 16px;
     color: #03a9f4;
   }
+
   .btn {
     background: #eceff1;
     font-size: 15px;
@@ -192,7 +197,9 @@ body {
     align-items: center;
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: absolute;
   }
+
   .btn:not(:first-child) {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -200,111 +207,132 @@ body {
     -webkit-transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
     transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
   }
+
   .btn:nth-child(2) {
     top: 0px;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
   }
+
   .btn:nth-child(3) {
     top: 0px;
     left: 0px;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
   }
+
   .btn:nth-child(4) {
     left: 0px;
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
   }
+
   .btn:nth-child(5) {
     top: 0px;
     left: 0px;
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
+
   .btn:nth-child(6) {
     top: 0px;
     -webkit-transition-delay: 0.4s;
     transition-delay: 0.4s;
   }
+
   .btn:nth-child(7) {
     top: 0px;
     left: 0px;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
   }
+
   .btn:nth-child(8) {
     left: 0px;
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
+
   .btn:nth-child(9) {
     top: 0px;
     left: 0px;
     -webkit-transition-delay: 0.2;
     transition-delay: 0.2s;
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(2) {
     top: -150px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(3) {
     top: -100px;
     left: 100px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(4) {
     left: 150px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(5) {
     top: 100px;
     left: 100px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(6) {
     top: -75px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(7) {
     top: -120px;
     left: -75px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(8) {
     left: -150px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   input#toggle:checked ~ #show-menu .btn:nth-child(9) {
     top: -70px;
     left: -130px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
+
   .menuBtn,
-  .closeBtn {
+.closeBtn {
     position: absolute;
     transition: all 0.3s ease;
   }
+
   .closeBtn {
     transform: translateY(50px);
     opacity: 0;
   }
+
   input#toggle:checked ~ #show-menu .btn .menuBtn {
     transform: translateY(-50px);
     opacity: 0;
   }
+
   input#toggle:checked ~ #show-menu .btn .closeBtn {
     transform: translateY(0px);
     opacity: 1;
   }
+
   .page-container {
     width: 100%;
     padding: 0;
@@ -313,6 +341,7 @@ body {
     grid-template-rows: 1fr 1fr;
     place-items: center;
   }
+
   .emotionz {
     width: 90%;
     height: 40vh;
@@ -328,5 +357,8 @@ body {
     width: 30vh;
     transform: skewX(10deg);
     animation: horizontal 1s;
+    position: relative;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
