@@ -3,12 +3,10 @@
 if (have_posts()) :
     while (have_posts()) : the_post(); ?>
 
-
-
-    <h1>fbiwebfiwefbjiwefnwfibwfibwifbwifbwei</h1>
-
-
-
+    <div class="page-container">
+        <div class="emotionz"></div>
+        <div class="home-artist"><div id="skew"></div></div>
+    </div>
 
 <?php endwhile;
 else :

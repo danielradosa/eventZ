@@ -12,15 +12,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="navigation">
-        <?php
-        $args = array(
-            'theme_location' => 'primary'
-        );
-        ?>
-        <div class="nav-button">
-            <?php wp_nav_menu($args); ?></div>
-
+    <nav class="navigation">
+        <a href="home" class="nav-button">home</a>
+        <a href="about" class="nav-button">about</a>
+        <a href="events" class="nav-button">events</a>
+        <a href="gallery" class="nav-button">gallery</a>
+        <a href="artists" class="nav-button">artists</a>
+    </nav>
     </div>
     <div class="menu">
         <input type="checkbox" id="toggle" />
@@ -30,28 +28,25 @@
                 <p>close</p>
             </div>
             <div class="btn">
-                <a href="#">1</a>
+                <a href="events">events</a>
             </div>
             <div class="btn">
-                <i class="material-icons md-36">not showing but indispensable</i>
             </div>
             <div class="btn">
-                <i class="material-icons md-36">not showing but indispensable</i>
             </div>
             <div class="btn">
-                <i class="material-icons md-36">not showing but indispensable</i>
             </div>
             <div class="btn">
-                <i class="material-icons md-36">not showing but indispensable</i>
+            <a href="home">home</a>
             </div>
             <div class="btn">
-                <a href="#">2</a>
+                <a href="artists">artists</a>
             </div>
             <div class="btn">
-                <a href="#">4</a>
+                <a href="about">about</a>
             </div>
             <div class="btn">
-                <a href="#">3</a>
+                <a href="gallery">gallery</a>
             </div>
         </label>
     </div>

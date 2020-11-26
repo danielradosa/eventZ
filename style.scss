@@ -5,26 +5,30 @@ body {
 }
 .navigation {
   height: 100vh;
+  margin: -0px 0 0 0;
   width: 100px;
-  background: #000;
-  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   pointer-events: none;
   position: fixed;
+  background-color: black;
+  color: #fff;
+  font-size: 200px;
+  cursor: pointer;
 }
-.menu{
+.menu {
   display: none;
 }
+
 .menu-text {
   display: none;
 }
 .nav-button {
   height: 100px;
   display: grid;
+  color: #fff;
   place-items: center;
-  color: #facabe;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 2rem;
@@ -39,12 +43,38 @@ body {
   width: 150px;
   transition: 1s ease-in-out;
 }
+.page-container {
+  width: 200vmin;
+  height: 100vh;
+  background: #000444;
+  padding: 10vh 0 0 20vmin;
+  margin: -31px 0 0 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.emotionz {
+  height: 70vh;
+  width: 90vh;
+  background: #fff;
+}
+.home-artist {
+  bottom: 0;
+  position: fixed;
+  transform: translate(110vmin, 0px);
+}
+#skew {
+  height: 70vh;
+  width: 30vh;
+  transform: skewX(10deg);
+  background: url("assets/collection-tushy-bidet.png");
+}
 @media screen and (max-width: 600px) {
   .navigation {
     display: none;
   }
-  #toggle{
-      display: none;
+  #toggle {
+    display: none;
   }
   .menu {
     margin: 0 auto;
@@ -167,7 +197,7 @@ body {
   }
 
   input#toggle:checked ~ #show-menu .btn:nth-child(6) {
-    top: 150px;
+    top: -75px;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
@@ -211,5 +241,17 @@ body {
   input#toggle:checked ~ #show-menu .btn .closeBtn {
     transform: translateY(0px);
     opacity: 1;
+  }
+  .page-container {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+  }
+  .emotionz {
+    width: 90%; 
+    height: 40vh;
   }
 }
