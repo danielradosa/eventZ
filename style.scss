@@ -4,6 +4,10 @@ body {
   overflow: hidden;
   background-color: #1A1F2B;
 }
+a{
+  text-decoration: none;
+  color: #fff;
+}
 //NAVIGATION
 .navigation {
   height: 110vh;
@@ -149,27 +153,27 @@ body {
     margin-top: -25px;
     bottom: 0;
     transform: translate(42vmin, 45vh);
-    position: absolute;
+    position: fixed;
+    z-index: 99;
+    font-family: 'Big Shoulders Stencil Display', cursive;
   }
 
   .btn {
     width: 70px;
     height: 70px;
     border-radius: 70px;
-    position: absolute;
     overflow: hidden;
+    position: absolute;
   }
 
   .material-icons.md-36 {
     font-size: 16px;
-    color: #03a9f4;
   }
 
   .btn {
-    background: #eceff1;
-    font-size: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background: #03a9f4;
+    color: #FFF;
+    font-size: 1.4em;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -179,7 +183,7 @@ body {
     align-items: center;
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: absolute;
+ 
   }
 
   .btn:not(:first-child) {
@@ -331,6 +335,7 @@ body {
     transform: skewX(10deg);
     animation: horizontal 1s;
     position: relative;
+    z-index: -99;
   }
 
 }
