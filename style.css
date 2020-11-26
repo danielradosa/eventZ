@@ -54,7 +54,7 @@ body {
   height: 100vh;
   background: #000444;
   padding: 10vh 0 0 20vmin;
-  margin: -31px 0 0 0;
+  margin: -32px 0 0 0;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,6 +64,8 @@ body {
   height: 70vh;
   width: 90vh;
   background: #fff;
+  animation: horizontal 1s;
+  position: relative;
 }
 
 .home-artist {
@@ -76,9 +78,75 @@ body {
   height: 70vh;
   width: 30vh;
   transform: skewX(10deg);
-  background: url("assets/collection-tushy-bidet.png");
+  background: #fff;
+  animation: vertical 1s;
+  position: relative;
 }
 
+.sparkles {
+  animation: vertical-two 1s;
+  width: 300px;
+  height: 300px;
+  background: url("assets/sparkles.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#spark-1 {
+  transform: translate(-50vmin, 0);
+}
+
+.spotlight {
+  animation: horizontal-two 1s;
+  width: 1500px;
+  height: 800px;
+  opacity: 0.05;
+  background: url("assets/spotlight.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: rotate(30deg);
+}
+
+#spotlight {
+  transform: translate(0px, -120vh);
+}
+
+@keyframes horizontal {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes horizontal-two {
+  from {
+    left: 300px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes vertical {
+  from {
+    bottom: -50vh;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+@keyframes vertical-two {
+  from {
+    top: -400px;
+  }
+  to {
+    top: 0px;
+  }
+}
 @media screen and (max-width: 600px) {
   .navigation {
     display: none;
@@ -274,6 +342,18 @@ body {
   .emotionz {
     width: 90%;
     height: 40vh;
+    animation: vertical-two 1s;
+  }
+
+  .home-artist {
+    transform: translate(0vmin, 0px);
+  }
+
+  #skew {
+    height: 50vh;
+    width: 30vh;
+    transform: skewX(10deg);
+    animation: horizontal 1s;
   }
 }
 
