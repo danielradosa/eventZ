@@ -41,6 +41,4 @@ function eventZ_setup() {
 }
 add_action('after_setup_theme' , 'eventZ_setup');
 
-
-
 ?>
