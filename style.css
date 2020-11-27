@@ -1,7 +1,7 @@
 /* ---------------------------- Body -------------------- */
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: #1A1F2B;
 }
@@ -16,8 +16,7 @@ a {
 /* ---------------------------- Navigation -------------------- */
 
 .navigation {
-  height: 110vh;
-  margin: 0px 0 0 0;
+  height: 100%;
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -28,7 +27,6 @@ a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 200px;
   cursor: pointer;
-  margin-top: -100px;
   transition: 0.3s ease-in-out;
 }
 
@@ -351,6 +349,7 @@ a {
 /* ---------------------------- Events Page -------------------- */
 
 #eventsPage {
+  margin: -32px 0 0 0;
   padding-left: 160px;
   background-image: linear-gradient(125deg, #590995, #1A1F2B, #1A1F2B, #1A1F2B, #03C4A1);
   height: 100%;
@@ -435,6 +434,9 @@ a {
   }
   #artistBlock {
     margin-left: 5vh;
+  }
+  .eventsPageColumnTwo {
+    display: none
   }
 }
 
