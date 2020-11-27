@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
   background-color: #1A1F2B;
@@ -11,9 +11,7 @@ a {
 }
 
 .navigation {
-  height: 110vh;
-  margin: 0px 0 0 0;
-  padding: 7px 0 0 0;
+  height: 100%;
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -24,7 +22,6 @@ a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 200px;
   cursor: pointer;
-  margin-top: -100px;
   transition: 0.3s ease-in-out;
 }
 
@@ -384,4 +381,154 @@ a {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/* ---------------------------- Events Page -------------------- */
+
+#eventsPage {
+  margin: -32px 0 0 0;
+  padding-left: 160px;
+  background-image: linear-gradient(125deg, #590995, #1A1F2B, #1A1F2B, #1A1F2B, #03C4A1);
+  height: 100%;
+  color: white;
+}
+
+/* ---------------------------- Events Page Columns -------------------- */
+
+.eventsPageColumnOne {
+  width: 70vw;
+  display: inline-block;
+}
+
+.eventsPageColumnTwo {
+  width: 20vw;
+  display: inline-block;
+  position: fixed;
+}
+
+/* ---------------------------- Events Page Title -------------------- */
+
+#eventsTitle {
+  padding-left: 50vh;
+}
+
+#eventsPageTitle {
+  font-size: 80px;
+}
+
+#eventsPageSubTitle {
+  font-size: 55px;
+  padding-left: 20vh;
+}
+
+/* ---------------------------- Artist Block -------------------- */
+
+#artistBlockRow {
+  width: 100%;
+}
+
+#artistBlock {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+/* ---------------------------- Artist Event Side Panel -------------------- */
+
+.artistEventSidePanel {
+  display: inline-block;
+  width: 100%;
+}
+
+.artistGenre {
+  width: 100%;
+}
+
+#genreName {
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#artistNameGenre {
+  width: 100%;
+}
+
+/* ---------------------------- Events Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #eventsPage {
+    padding-left: 20px;
+    background-image: linear-gradient(#03C4A1, #1A1F2B, #1A1F2B, #C40337, #1A1F2B);
+  }
+  #eventsTitle {
+    padding-left: 0;
+  }
+  #eventsPageTitle {
+    font-size: 40px;
+  }
+  #eventsPageSubTitle {
+    font-size: 25px;
+    padding-left: 15vh;
+  }
+  #artistBlock {
+    margin-left: 5vh;
+  }
+  .eventsPageColumnTwo {
+    display: none
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* 404 Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.lostPage {
+  display: grid;
+  padding-left: 120px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+  height: 100vh;
+  background-image: linear-gradient(96deg, #03C4A1, #1A1F2B, #1A1F2B, #C40337, #1A1F2B);
+  animation-name: page-transistion;
+  animation-duration: 3s;
+}
+
+@keyframes page-transistion {
+  from {
+    opacity: 0;
+  }
+}
+
+#lostPageContent {
+  font-size: 8vh;
+  margin-left: 20vh;
+  display: inline-block;
+}
+
+.lostPageButton {
+  margin-right: 20vh;
+  display: inline-block;
+  background-color: rgb(143, 141, 216);
+  border: none;
+  border-radius: 60px;
+  color: white;
+  color: linear-gradient(96deg, #03C4A1, #1A1F2B, #1A1F2B, #C40337, #1A1F2B);
+  ;
+  padding: 20px;
+  width: 50%;
+  font-size: 4vh;
+}
+
+.lostPageButton:hover {
+  color: #f0109a;
+  animation: button-animation linear 4s 1 normal forwards;
+}
+
+@keyframes button-animation {
+  to {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
