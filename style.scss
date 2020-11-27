@@ -12,6 +12,7 @@ a{
 .navigation {
   height: 110vh;
   margin: -0px 0 0 0;
+  padding: 7px 0 0 0;
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -54,34 +55,50 @@ a{
 }
 //  HOME PAGE
 .page-container {
+  overflow: hidden;
   width: 200vmin;
   height: 100vh;
   background: #000444;
+  background-image: url('assets/background.png');
   padding: 10vh 0 0 20vmin;
-  margin: -32px 0 0 0;
-  overflow: hidden;
+  
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .emotionz {
   height: 70vh;
   width: 90vh;
-  background: #fff;
+  background:url('assets/title.png');
   animation: horizontal 1s;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+.emotionz:hover { 
+  background: url('assets/harry.png');
+  transition: 2s ease-in;
 }
 .home-artist {
   bottom: 0;
   position: fixed;
-  transform: translate(110vmin, 0px);
+  transform: translate(100vmin, 20px);
 }
 #skew {
   height: 70vh;
-  width: 30vh;
-  transform: skewX(10deg);
-  background: #fff;
+  width: 37vh;
+  background: url('assets/harry.png');
   animation: vertical 1s;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(3deg);
+  pointer-events: auto;
 }
 
 .sparkles{
@@ -93,14 +110,15 @@ a{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
 }
 #spark-1{
-  transform: translate(-50vmin, 0);
+  transform: translate(-50vmin, -5vh);
 }
 .spotlight{
   animation: horizontal-two 1s;
-  width: 1500px;
-  height: 800px;
+  width: 100px;
+  height: 500px;
   opacity: 0.05;
   background: url('assets/spotlight.png');
   background-position: center;
@@ -320,6 +338,7 @@ a{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     place-items: center;
+    margin: -45px 0 0 0;
   }
   .emotionz {
     width: 90%; 
