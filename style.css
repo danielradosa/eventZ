@@ -6,28 +6,6 @@ body {
   background-color: #1A1F2B;
 }
 
-/* --------------------------------------------------------------------------------------------------------  */
-
-/* Custom Scrollbar Styling */
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-image: linear-gradient(180deg, #482569, #03C4A1);
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 5px;
-  border-radius: 10px;
-  background-image: linear-gradient(180deg, #482569, #abb0c2);
-}
-
 /* ---------------------------- Links-------------------- */
 
 a {
@@ -501,9 +479,9 @@ a {
 
 #aboutUsPage {
   margin: -32px 0 0 0;
+  width: 100vw;
   background-image: linear-gradient(32deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
   height: 100vh;
-  display: flex;
 }
 
 /* ---------------------------- About Us Styling -------------------- */
@@ -511,7 +489,7 @@ a {
 .eventZPanel {
   height: 20vh;
   width: 80vw;
-  padding-left: 25vw;
+  padding-left: 20vw;
   padding-top: 25vh;
   position: relative;
 }
@@ -528,7 +506,7 @@ a {
   color: white;
   font-size: 4vh;
   position: absolute;
-  left: 70vw;
+  left: 75vw;
   height: 50vh;
   width: 20vw;
   animation: eventZProjectAnimation linear 5s 1 normal forwards;
@@ -539,14 +517,15 @@ a {
     top: -50vh;
   }
   to {
-    top: 75vh;
+    top: 40vh;
   }
 }
 
 .eventZProjectLinks {
-  margin-top: 10vh;
-  height: 50vh;
+  display: flex;
+  height: 10vh;
   width: 100%;
+  background-color: black;
 }
 
 #eventZProjectLinksTitle {
@@ -557,6 +536,7 @@ a {
 
 #groupMember {
   color: rgb(157, 25, 233);
+  background-image: transparent;
   padding: 20px;
   font-size: 18px;
   animation: groupMemberAnimation linear 4s 1 normal forwards;
@@ -565,11 +545,9 @@ a {
 @keyframes groupMemberAnimation {
   from {
     color: black;
-    background-color: transparent;
     left: -50vh;
   }
   to {
-    background-color: rgb(0, 0, 0);
     color: rgb(233, 25, 122);
     left: 72vh;
   }
@@ -579,8 +557,9 @@ a {
 
 @media screen and (max-width: 600px) {
   #aboutUsPage {
-    height: 100%;
-    background-image: linear-gradient(2deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
+    margin: -32px 0 0 0;
+    height: 100vh;
+    background-image: linear-gradient(2deg, #B777E8, #1A1F2B, #1A1F2B, #1A1F2B, #1A1F2B, #03C4A1);
   }
   .eventZPanel {
     height: 100%;
@@ -589,25 +568,21 @@ a {
     padding-top: 0;
     position: relative;
   }
-  #eventZMembersTitle {
-    color: white;
-    font-size: 12vh;
-  }
   #eventZGroupImage {
     width: 380px;
     padding-left: 20px;
     padding-top: 20vh;
   }
-  .groupMembers {
-    display: flex;
-    justify-content: center;
+  #eventZMembersTitle {
+    color: white;
+    font-size: 12vh;
   }
   .eventZProject {
     color: white;
-    font-size: 2vh;
+    font-size: 16px;
     position: absolute;
-    left: 40vw;
-    height: 20vh;
+    top: 120vh;
+    left: 35vw;
     width: 50vw;
     animation: eventZProjectAnimation linear 5s 1 normal forwards;
   }
@@ -616,20 +591,34 @@ a {
       top: -50vh;
     }
     to {
-      top: 80vh;
+      top: 65vh;
     }
   }
-
   #eventZProjectLinksTitle {
     color: rgb(25, 139, 233);
-    margin-left: 5vw;
-    font-size: 4vh;
-    padding-bottom: 20px;
+    position: absolute;
+    font-size: 16px;
+    padding-left: 50px;
+  }
+  .eventZProjectLinks {
+    display: flex;
+    margin-top: 2vh;
+    height: 10vh;
+    width: 100%;
+    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
+  }
+  @keyframes eventZProjectLinksAnimation {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: black;
+    }
   }
   #groupMember {
     color: rgb(157, 25, 233);
-    padding: 5px;
-    font-size: 2vh;
+    padding: 8px;
+    font-size: 14px;
     animation: groupMemberAnimation linear 4s 1 normal forwards;
   }
 }
