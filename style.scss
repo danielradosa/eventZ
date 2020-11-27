@@ -61,7 +61,6 @@ a{
   background: #000444;
   background-image: url('assets/background.png');
   padding: 10vh 0 0 20vmin;
-  
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-position: center;
@@ -82,6 +81,9 @@ a{
 .emotionz:hover { 
   background: url('assets/harry.png');
   transition: 2s ease-in;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .home-artist {
   bottom: 0;
@@ -130,8 +132,6 @@ a{
 #spotlight{
   transform: translate(0px, -120vh); 
 }
-
-
 //  ANIMATIONS
 @keyframes horizontal {
   from {left: -100px;}
