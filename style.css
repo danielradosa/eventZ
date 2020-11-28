@@ -1,3 +1,20 @@
+/*
+Theme Name: eventZ Ticket Sales
+Text Domain: eventZ Event Showcase
+Version: 0.1
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: CMS/Adv Adobe Semester Project -- MMD 2020
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, 
+custom-menu, editor-style, featured-images, footer-widgets, 
+full-width-template, rtl-language-support, sticky-post, theme-options, 
+threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Author: Penda Svane
+Author URI: 
+Theme URI: 
+
+*/
+
 /* ---------------------------- Body -------------------- */
 
 body {
@@ -13,6 +30,32 @@ a {
   color: #fff;
 }
 
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* index.php  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.main {
+  padding-left: 500px;
+  padding-right: 500px;
+  background-color: #1A1F2B;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Main Menu Navigation  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+ 
+.mainMenu
+{
+  background-color: rgb(49, 49, 49);
+  width: 100%;
+  height: 10vh;
+  padding-left: 350px;
+  color: white;
+} 
 /* --------------------------------------------------------------------------------------------------------  */
 
 /* Desktop Navigation  */
@@ -482,6 +525,31 @@ a {
   width: 100vw;
   background-image: linear-gradient(32deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
   height: 100vh;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Artist Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#artistPage {
+  margin: -32px 0 0 0;
+  padding-left: 200px;
+  width: 100vw;
+  background-image: linear-gradient(32deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
+  height: 100vh;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Artist Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singlePost {
+  background-color: red;
+  padding-left: 200px;
 }
 
 /* ---------------------------- About Us Styling -------------------- */
