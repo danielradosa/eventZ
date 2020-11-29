@@ -76,8 +76,8 @@ a {
 }
 
 .emotionz {
-  height: 70vh;
-  width: 90vh;
+  height: 60vh;
+  width: 105vh;
   background: url("assets/title.png");
   animation: horizontal 1s;
   position: relative;
@@ -85,6 +85,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
+  transform: translate(-10vmin, 0);
 }
 
 .emotionz:hover {
@@ -102,20 +103,30 @@ a {
 }
 
 #skew {
-  height: 70vh;
-  width: 37vh;
+  height: 90vh;
+  width: 48vh;
   background: url("assets/harry.png");
   animation: vertical 1s;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: rotate(3deg);
   pointer-events: auto;
 }
 
+.green {
+  width: 100vmin;
+  height: 200px;
+  position: relative;
+  opacity: 1;
+  transform: translate(10vmin, 80vh);
+  z-index: -99;
+  background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  animation: 5s horizontal-three infinite;
+}
+
 .sparkles {
-  animation: vertical-two 1s;
+  animation: vertical-two 3s;
   width: 300px;
   height: 300px;
   top: -5vh;
@@ -131,11 +142,18 @@ a {
   transform: translate(50vmin, -5vh);
 }
 
+#spark-2 {
+  transform: translate(37vmin, -2vh);
+}
+
+#spark-3 {
+  transform: translate(39vmin, -7vh);
+}
+
 .spotlight {
-  transform: rotate(30deg);
   animation: vertical 1s;
-  width: 1000px;
-  height: 900px;
+  width: 1900px;
+  height: 1900px;
   opacity: 0.05;
   background: url("assets/spotlight.png");
   background-position: center;
@@ -145,7 +163,7 @@ a {
 }
 
 #spotlight {
-  transform: translate(60vmin, -20vh) rotate(350deg);
+  transform: translate(-30vmin, -25vh) rotate(350deg);
 }
 
 @keyframes horizontal {
@@ -162,6 +180,14 @@ a {
   }
   to {
     left: 0px;
+  }
+}
+@keyframes horizontal-three {
+  0% {
+    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  }
+  100% {
+    background-image: linear-gradient(90deg, #1a1f2b30, #03c4a1);
   }
 }
 @keyframes vertical {
@@ -340,6 +366,12 @@ a {
     opacity: 1;
   }
 
+  .contain {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+
   .page-container {
     width: 100%;
     padding: 0;
@@ -350,9 +382,13 @@ a {
   }
 
   .emotionz {
-    width: 90%;
-    height: 40vh;
+    width: 110vmin;
+    height: 29vh;
     animation: vertical-two 1s;
+    transform: translate(-78vmin, 10vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .home-artist {
@@ -362,10 +398,16 @@ a {
   #skew {
     height: 50vh;
     width: 30vh;
-    transform: skewX(10deg);
+    transform: translate(0vmin, 0vh);
     animation: horizontal 1s;
     position: relative;
     z-index: -99;
+  }
+
+  .green {
+    bottom: 0;
+    transform: translate(0vmin, 0vh);
+    position: fixed;
   }
 }
 /* --------------------------------------------------------------------------------------------------------  */
@@ -468,7 +510,7 @@ a {
 #aboutUsPage {
   margin: -32px 0 0 0;
   width: 100vw;
-  background-image: linear-gradient(32deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
+  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100vh;
 }
 
@@ -521,7 +563,7 @@ a {
 }
 
 #groupMember {
-  color: rgb(157, 25, 233);
+  color: #9d19e9;
   background-image: transparent;
   padding: 20px;
   font-size: 18px;
@@ -534,7 +576,7 @@ a {
     left: -50vh;
   }
   to {
-    color: rgb(233, 25, 122);
+    color: #e9197a;
     left: 72vh;
   }
 }
@@ -543,7 +585,7 @@ a {
   #aboutUsPage {
     margin: -32px 0 0 0;
     height: 100vh;
-    background-image: linear-gradient(2deg, #B777E8, #1A1F2B, #1A1F2B, #1A1F2B, #1A1F2B, #03C4A1);
+    background-image: linear-gradient(2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   }
 
   .eventZPanel {
@@ -553,60 +595,12 @@ a {
     padding-top: 0;
     position: relative;
   }
+
   #eventZGroupImage {
     width: 380px;
     padding-left: 20px;
     padding-top: 20vh;
   }
-  #eventZMembersTitle {
-    color: white;
-    font-size: 12vh;
-  }
-  .eventZProject {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 120vh;
-    left: 35vw;
-    width: 50vw;
-    animation: eventZProjectAnimation linear 5s 1 normal forwards;
-  }
-  @keyframes eventZProjectAnimation {
-    from {
-      top: -50vh;
-    }
-    to {
-      top: 65vh;
-    }
-  }
-  #eventZProjectLinksTitle {
-    color: rgb(25, 139, 233);
-    position: absolute;
-    font-size: 16px;
-    padding-left: 50px;
-  }
-  .eventZProjectLinks {
-    display: flex;
-    margin-top: 2vh;
-    height: 10vh;
-    width: 100%;
-    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
-  }
-  @keyframes eventZProjectLinksAnimation {
-    from {
-      background-color: transparent;
-    }
-    to {
-      background-color: black;
-    }
-  }
-  #groupMember {
-    color: rgb(157, 25, 233);
-    padding: 8px;
-    font-size: 14px;
-    animation: groupMemberAnimation linear 4s 1 normal forwards;
-  }
-}
 
   #eventZMembersTitle {
     color: white;
@@ -711,5 +705,6 @@ a {
     width: 100%;
   }
 }
-
 /* --------------------------------------------------------------------------------------------------------  */
+
+/*# sourceMappingURL=style.css.map */

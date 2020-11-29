@@ -59,7 +59,7 @@ a {
   width: 200vmin;
   height: 100vh;
   margin: -32px 0 0 0;
-  background: url('assets/title.png');
+  background: url("assets/title.png");
   background-image: url("assets/background.png");
   padding: 10vh 0 0 20vmin;
   display: grid;
@@ -69,8 +69,8 @@ a {
   background-size: cover;
 }
 .emotionz {
-  height: 70vh;
-  width: 90vh;
+  height: 60vh;
+  width: 105vh;
   background: url("assets/title.png");
   animation: horizontal 1s;
   position: relative;
@@ -78,6 +78,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
+  transform: translate(-10vmin, 0);
 }
 .emotionz:hover {
   background: url("assets/harry.png");
@@ -92,20 +93,30 @@ a {
   transform: translate(80vmin, 20px);
 }
 #skew {
-  height: 70vh;
-  width: 37vh;
+  height: 90vh;
+  width: 48vh;
   background: url("assets/harry.png");
   animation: vertical 1s;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: rotate(3deg);
+
   pointer-events: auto;
 }
-
+.green {
+  width: 100vmin;
+  height: 200px;
+  position: relative;
+  opacity: 1;
+  transform: translate(10vmin, 80vh);
+  z-index: -99;
+  background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  animation: 5s horizontal-three infinite;
+  // transition: ease-in-out;
+}
 .sparkles {
-  animation: vertical-two 1s;
+  animation: vertical-two 3s;
   width: 300px;
   height: 300px;
   top: -5vh;
@@ -119,11 +130,16 @@ a {
 #spark-1 {
   transform: translate(50vmin, -5vh);
 }
+#spark-2 {
+  transform: translate(37vmin, -2vh);
+}
+#spark-3 {
+  transform: translate(39vmin, -7vh);
+}
 .spotlight {
-  transform: rotate(30deg);
   animation: vertical 1s;
-  width: 1000px;
-  height: 900px;
+  width: 1900px;
+  height: 1900px;
   opacity: 0.05;
   background: url("assets/spotlight.png");
   background-position: center;
@@ -132,7 +148,7 @@ a {
   position: relative;
 }
 #spotlight {
-  transform: translate(60vmin, -20vh) rotate(350deg);
+  transform: translate(-30vmin, -25vh) rotate(350deg);
 }
 //  ANIMATIONS
 @keyframes horizontal {
@@ -149,6 +165,14 @@ a {
   }
   to {
     left: 0px;
+  }
+}
+@keyframes horizontal-three {
+  0% {
+    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  }
+  100% {
+    background-image: linear-gradient(90deg, #1a1f2b30, #03c4a1);
   }
 }
 @keyframes vertical {
@@ -323,6 +347,11 @@ a {
   }
 
   //  HOME PAGE
+  .contain {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
   .page-container {
     width: 100%;
     padding: 0;
@@ -332,9 +361,13 @@ a {
     place-items: center;
   }
   .emotionz {
-    width: 90%;
-    height: 40vh;
+    width: 110vmin;
+    height: 29vh;
     animation: vertical-two 1s;
+    transform: translate(-78vmin, 10vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .home-artist {
     transform: translate(0vmin, 0px);
@@ -342,10 +375,15 @@ a {
   #skew {
     height: 50vh;
     width: 30vh;
-    transform: skewX(10deg);
+    transform: translate(-0vmin, -0vh);
     animation: horizontal 1s;
     position: relative;
     z-index: -99;
+  }
+  .green {
+    bottom: 0;
+    transform: translate(0vmin, 0vh);
+    position: fixed;
   }
 }
 
