@@ -11,11 +11,12 @@
 </head>
 
 <body class="body">
-<div class="mainMenu">
+<div class="navigation">
+ 
     <?php
     wp_nav_menu(array(
         'theme_location' => 'primary',
-        'before' => '<class="nav-item active">',      
+        'before' => '<span class="btn">',      
         'menu_class' =>'navbar-nav mr-auto',
         'link_before' =>'<span class="nav-link">',      
         'link_after' =>'</span>', 
@@ -27,13 +28,6 @@
 </div>
 
 
-    <nav class="navigation">
-        <a href="home" class="nav-button">home</a>
-        <a href="about" class="nav-button">about</a>
-        <a href="events" class="nav-button">events</a>
-        <a href="gallery" class="nav-button">gallery</a>
-        <a href="artists" class="nav-button">artists</a>
-    </nav>
     </div>
     <div class="menu">
         <input type="checkbox" id="toggle" />
@@ -42,9 +36,7 @@
                 <p>MENU</p>
                 <p>X</p>
             </div>
-            <div class="btn">
-                <a href="events">events</a>
-            </div>
+    
             <div class="btn">
             </div>
             <div class="btn">
@@ -52,16 +44,18 @@
             <div class="btn">
             </div>
             <div class="btn">
-                <a href="home">home</a>
+            <?php
+    wp_nav_menu(array(
+        'theme_location' => 'footer',
+        'before' => '<span class="btn">',      
+        'menu_class' =>'navbar-nav mr-auto',
+        'link_before' =>'<span class="nav-link">',      
+        'link_after' =>'</span>', 
+        'container' => false, 
+        'items_wrap' => '%3$s'
+    ));
+?>
             </div>
-            <div class="btn">
-                <a href="artists">artists</a>
-            </div>
-            <div class="btn">
-                <a href="about">about</a>
-            </div>
-            <div class="btn">
-                <a href="gallery">gallery</a>
-            </div>
+  
         </label>
     </div>
