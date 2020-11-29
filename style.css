@@ -1,13 +1,66 @@
+/*
+Theme Name: eventZ Ticket Sales
+Text Domain: eventZ Event Showcase
+Version: 0.1
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: CMS/Adv Adobe Semester Project -- MMD 2020
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, 
+custom-menu, editor-style, featured-images, footer-widgets, 
+full-width-template, rtl-language-support, sticky-post, theme-options, 
+threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Author: Penda Svane
+Author URI: 
+Theme URI: 
+
+*/
+
+/* ---------------------------- Body -------------------- */
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #1a1f2b;
+  background-color: #1A1F2B;
 }
+
+/* ---------------------------- Links-------------------- */
 
 a {
   text-decoration: none;
   color: #fff;
 }
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* index.php  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.main {
+  padding-left: 500px;
+  padding-right: 500px;
+  background-color: #1A1F2B;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Main Menu Navigation  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+ 
+.mainMenu
+{
+  background-color: rgb(49, 49, 49);
+  width: 100%;
+  height: 10vh;
+  padding-left: 350px;
+  color: white;
+} 
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Desktop Navigation  */
+
+/* --------------------------------------------------------------------------------------------------------  */
 
 .navigation {
   height: 110vh;
@@ -19,7 +72,7 @@ a {
   justify-content: space-evenly;
   pointer-events: none;
   position: fixed;
-  background-image: linear-gradient(to right, #482569, #2a46b2);
+  background-image: linear-gradient(to right, #482569, #2A46B2);
   color: rgba(255, 255, 255, 0.5);
   font-size: 200px;
   cursor: pointer;
@@ -56,24 +109,22 @@ a {
   width: 150px;
 }
 
-.contain {
-  overflow: hidden;
-}
-
 .page-container {
-  overflow: hidden;
   width: 200vmin;
   height: 100vh;
-  margin: -32px 0 0 0;
-  background: url("assets/title.png");
-  background-image: url("assets/background.png");
+  background: #000444;
   padding: 10vh 0 0 20vmin;
+  margin: -32px 0 0 0;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Home Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
 
 .emotionz {
   height: 60vh;
@@ -99,7 +150,7 @@ a {
 .home-artist {
   bottom: 0;
   position: fixed;
-  transform: translate(80vmin, 20px);
+  transform: translate(110vmin, 0px);
 }
 
 #skew {
@@ -129,17 +180,15 @@ a {
   animation: vertical-two 3s;
   width: 300px;
   height: 300px;
-  top: -5vh;
   background: url("assets/sparkles.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transform: rotate(10deg);
 }
 
 #spark-1 {
-  transform: translate(50vmin, -5vh);
+  transform: translate(-50vmin, 0);
 }
 
 #spark-2 {
@@ -160,6 +209,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transform: rotate(30deg);
 }
 
 #spotlight {
@@ -174,6 +224,7 @@ a {
     left: 0px;
   }
 }
+
 @keyframes horizontal-two {
   from {
     left: 300px;
@@ -198,23 +249,29 @@ a {
     bottom: 0px;
   }
 }
+
 @keyframes vertical-two {
   from {
     top: -400px;
   }
   to {
-    top: -5vh;
+    top: 0px;
   }
 }
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Mobile Menu  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 @media screen and (max-width: 600px) {
   .navigation {
     display: none;
   }
-
   #toggle {
     display: none;
   }
-
   .menu {
     margin: 0 auto;
     display: block;
@@ -228,7 +285,6 @@ a {
     z-index: 99;
     font-family: "Big Shoulders Stencil Display", cursive;
   }
-
   .btn {
     width: 70px;
     height: 70px;
@@ -236,10 +292,12 @@ a {
     overflow: hidden;
     position: absolute;
   }
-
+  .material-icons.md-36 {
+    font-size: 16px;
+  }
   .btn {
     background: #03a9f4;
-    color: #fff;
+    color: #FFF;
     font-size: 1.4em;
     display: flex;
     -webkit-box-pack: center;
@@ -248,120 +306,117 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
-
   .btn:not(:first-child) {
     opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     z-index: -2;
+    -webkit-transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
     transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
   }
-
   .btn:nth-child(2) {
     top: 0px;
+    -webkit-transition-delay: 0s;
     transition-delay: 0s;
   }
-
   .btn:nth-child(3) {
     top: 0px;
     left: 0px;
+    -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
   }
-
   .btn:nth-child(4) {
     left: 0px;
+    -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
   }
-
   .btn:nth-child(5) {
     top: 0px;
     left: 0px;
+    -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
-
   .btn:nth-child(6) {
     top: 0px;
+    -webkit-transition-delay: 0.4s;
     transition-delay: 0.4s;
   }
-
   .btn:nth-child(7) {
     top: 0px;
     left: 0px;
+    -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
   }
-
   .btn:nth-child(8) {
     left: 0px;
+    -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
-
   .btn:nth-child(9) {
     top: 0px;
     left: 0px;
+    -webkit-transition-delay: 0.2;
     transition-delay: 0.2s;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(2) {
+  input#toggle:checked~#show-menu .btn:nth-child(2) {
     top: -150px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(3) {
+  input#toggle:checked~#show-menu .btn:nth-child(3) {
     top: -100px;
     left: 100px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(4) {
+  input#toggle:checked~#show-menu .btn:nth-child(4) {
     left: 150px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(5) {
+  input#toggle:checked~#show-menu .btn:nth-child(5) {
     top: 100px;
     left: 100px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(6) {
+  input#toggle:checked~#show-menu .btn:nth-child(6) {
     top: -75px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(7) {
+  input#toggle:checked~#show-menu .btn:nth-child(7) {
     top: -120px;
     left: -75px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(8) {
+  input#toggle:checked~#show-menu .btn:nth-child(8) {
     left: -150px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(9) {
+  input#toggle:checked~#show-menu .btn:nth-child(9) {
     top: -70px;
     left: -130px;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
-
-  .menuBtn,
-.closeBtn {
+  .menuBtn, .closeBtn {
     position: absolute;
     transition: all 0.3s ease;
   }
-
   .closeBtn {
     transform: translateY(50px);
     opacity: 0;
   }
-
-  input#toggle:checked ~ #show-menu .btn .menuBtn {
+  input#toggle:checked~#show-menu .btn .menuBtn {
     transform: translateY(-50px);
     opacity: 0;
   }
-
-  input#toggle:checked ~ #show-menu .btn .closeBtn {
+  input#toggle:checked~#show-menu .btn .closeBtn {
     transform: translateY(0px);
     opacity: 1;
   }
@@ -380,7 +435,6 @@ a {
     grid-template-rows: 1fr 1fr;
     place-items: center;
   }
-
   .emotionz {
     width: 110vmin;
     height: 29vh;
@@ -390,11 +444,9 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
   }
-
   .home-artist {
     transform: translate(0vmin, 0px);
   }
-
   #skew {
     height: 50vh;
     width: 30vh;
@@ -410,18 +462,23 @@ a {
     position: fixed;
   }
 }
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 /* Events Page  */
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 #eventsPage {
   margin: -32px 0 0 0;
   padding-left: 160px;
-  background-image: linear-gradient(125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  background-image: linear-gradient(125deg, #590995, #1A1F2B, #1A1F2B, #1A1F2B, #03C4A1);
   height: 100%;
   color: white;
 }
 
 /* ---------------------------- Events Page Columns -------------------- */
+
 .eventsPageColumnOne {
   width: 70vw;
   display: inline-block;
@@ -434,6 +491,7 @@ a {
 }
 
 /* ---------------------------- Events Page Title -------------------- */
+
 #eventsTitle {
   padding-left: 50vh;
 }
@@ -448,6 +506,7 @@ a {
 }
 
 /* ---------------------------- Artist Block -------------------- */
+
 #artistBlockRow {
   width: 100%;
 }
@@ -458,6 +517,7 @@ a {
 }
 
 /* ---------------------------- Artist Event Side Panel -------------------- */
+
 .artistEventSidePanel {
   display: inline-block;
   width: 100%;
@@ -469,7 +529,7 @@ a {
 
 #genreName {
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), white);
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
 }
 
 #artistNameGenre {
@@ -477,36 +537,36 @@ a {
 }
 
 /* ---------------------------- Events Page Mobile -------------------- */
+
 @media screen and (max-width: 600px) {
   #eventsPage {
     padding-left: 20px;
-    background-image: linear-gradient(#03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+    background-image: linear-gradient(#03C4A1, #1A1F2B, #1A1F2B, #C40337, #1A1F2B);
   }
-
   #eventsTitle {
     padding-left: 0;
   }
-
   #eventsPageTitle {
     font-size: 40px;
   }
-
   #eventsPageSubTitle {
     font-size: 25px;
     padding-left: 15vh;
   }
-
   #artistBlock {
     margin-left: 5vh;
   }
-
   .eventsPageColumnTwo {
-    display: none;
+    display: none
   }
 }
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 /* About Us Page  */
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 #aboutUsPage {
   margin: -32px 0 0 0;
   width: 100vw;
@@ -514,7 +574,33 @@ a {
   height: 100vh;
 }
 
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Artist Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#artistPage {
+  margin: -32px 0 0 0;
+  padding-left: 200px;
+  width: 100vw;
+  background-image: linear-gradient(32deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
+  height: 100vh;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Artist Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singlePost {
+  background-color: red;
+  padding-left: 200px;
+}
+
 /* ---------------------------- About Us Styling -------------------- */
+
 .eventZPanel {
   height: 20vh;
   width: 80vw;
@@ -549,6 +635,7 @@ a {
     top: 40vh;
   }
 }
+
 .eventZProjectLinks {
   display: flex;
   height: 10vh;
@@ -557,7 +644,7 @@ a {
 }
 
 #eventZProjectLinksTitle {
-  color: #198be9;
+  color: rgb(25, 139, 233);
   font-size: 12vh;
   padding-bottom: 50px;
 }
@@ -580,14 +667,15 @@ a {
     left: 72vh;
   }
 }
+
 /* ---------------------------- About Us Page Mobile -------------------- */
+
 @media screen and (max-width: 600px) {
   #aboutUsPage {
     margin: -32px 0 0 0;
     height: 100vh;
     background-image: linear-gradient(2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   }
-
   .eventZPanel {
     height: 100%;
     width: 100%;
@@ -602,62 +690,12 @@ a {
     padding-top: 20vh;
   }
 
-  #eventZMembersTitle {
-    color: white;
-    font-size: 12vh;
-  }
-
-  .eventZProject {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 120vh;
-    left: 35vw;
-    width: 50vw;
-    animation: eventZProjectAnimation linear 5s 1 normal forwards;
-  }
-
-  @keyframes eventZProjectAnimation {
-    from {
-      top: -50vh;
-    }
-    to {
-      top: 65vh;
-    }
-  }
-  #eventZProjectLinksTitle {
-    color: #198be9;
-    position: absolute;
-    font-size: 16px;
-    padding-left: 50px;
-  }
-
-  .eventZProjectLinks {
-    display: flex;
-    margin-top: 2vh;
-    height: 10vh;
-    width: 100%;
-    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
-  }
-
-  @keyframes eventZProjectLinksAnimation {
-    from {
-      background-color: transparent;
-    }
-    to {
-      background-color: black;
-    }
-  }
-  #groupMember {
-    color: #9d19e9;
-    padding: 8px;
-    font-size: 14px;
-    animation: groupMemberAnimation linear 4s 1 normal forwards;
-  }
-}
 /* --------------------------------------------------------------------------------------------------------  */
+
 /* 404 Page Styling  */
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 .lostPage {
   display: grid;
   padding-left: 120px;
@@ -666,7 +704,7 @@ a {
   margin: 0;
   color: white;
   height: 100vh;
-  background-image: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  background-image: linear-gradient(96deg, #03C4A1, #1A1F2B, #1A1F2B, #C40337, #1A1F2B);
   animation-name: page-transistion;
   animation-duration: 3s;
 }
@@ -676,6 +714,7 @@ a {
     opacity: 0;
   }
 }
+
 #lostPageContent {
   font-size: 8vh;
   margin-left: 20vh;
@@ -685,11 +724,12 @@ a {
 .lostPageButton {
   margin-right: 20vh;
   display: inline-block;
-  background-color: #8f8dd8;
+  background-color: rgb(143, 141, 216);
   border: none;
   border-radius: 60px;
   color: white;
-  color: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  color: linear-gradient(96deg, #03C4A1, #1A1F2B, #1A1F2B, #C40337, #1A1F2B);
+  ;
   padding: 20px;
   width: 50%;
   font-size: 4vh;

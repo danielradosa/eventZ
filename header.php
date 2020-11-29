@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventZ </title>
     <title><?php bloginfo('name'); ?></title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <?php wp_head(); ?>
+    <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/style.css' />
 </head>
 
-<body <?php body_class(); ?>>
+<body class="body">
+<div class="mainMenu">
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'primary',
+        'before' => '<class="nav-item active">',      
+        'menu_class' =>'navbar-nav mr-auto',
+        'link_before' =>'<span class="nav-link">',      
+        'link_after' =>'</span>', 
+        'container' => false, 
+        'items_wrap' => '%3$s'
+    ));
+?>
+
+</div>
+
+
     <nav class="navigation">
         <a href="home" class="nav-button">home</a>
         <a href="about" class="nav-button">about</a>
