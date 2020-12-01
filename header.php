@@ -15,46 +15,28 @@
  
     <?php
     wp_nav_menu(array(
-        'theme_location' => 'primary',
-        'before' => '<span class="btn">',      
-        'menu_class' =>'navbar-nav mr-auto',
-        'link_before' =>'<span class="nav-link">',      
-        'link_after' =>'</span>', 
-        'container' => false, 
-        'items_wrap' => '%3$s'
+        'theme_location' => 'primary',      
+        'link_before' =>'<li class="nav-link">',      
+        'link_after' =>'</li>', 
     ));
 ?>
 
 </div>
-
-
     </div>
     <div class="menu">
         <input type="checkbox" id="toggle" />
         <label id="show-menu" for="toggle">
-            <div class="btn">
-                <p>MENU</p>
-                <p>X</p>
+            <div class="menuBtn">
+                MENU
             </div>
-    
-            <div class="btn">
-            </div>
-            <div class="btn">
-            </div>
-            <div class="btn">
-            </div>
-            <div class="btn">
             <?php
-    wp_nav_menu(array(
-        'theme_location' => 'footer',
-        'before' => '<span class="btn">',      
-        'menu_class' =>'navbar-nav mr-auto',
-        'link_before' =>'<span class="nav-link">',      
-        'link_after' =>'</span>', 
-        'container' => false, 
-        'items_wrap' => '%3$s'
-    ));
-?>
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'link_before' =>'<div class="btn">',      
+                        'link_after' =>'</div>', 
+                        'items_wrap' => '%3$s'
+                    ));
+            ?>                
             </div>
   
         </label>

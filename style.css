@@ -1,735 +1,883 @@
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Entire Body  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1a1f2b;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1f2b;
+  padding-top: 0;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Links  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Navigation  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.navigation {
+  height: 100vh;
+  width: 5vw;
+  display: grid;
+  position: fixed;
+  background-image: linear-gradient(to right, #482569, #2a46b2);
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  height: 5vh;
+  width: 8vh;
+  color: white;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  transform: rotate(-90deg);
+  transition: 0.3s ease-in;
+  list-style-type: square;
+  list-style: none;
+}
+
+.nav-link:hover {
+  transform: rotate(0deg);
+}
+
+.navigation:hover {
+  width: 10vw;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Home Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.page-container {
+  overflow: hidden;
+  width: 200vmin;
+  height: 100vh;
+  margin: -32px 0 0 0;
+  background: url("assets/title.png");
+  background-image: url("assets/background.png");
+  padding: 10vh 0 0 20vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.emotionz {
+  height: 60vh;
+  width: 105vh;
+  background: url("assets/title.png");
+  animation: horizontal 1s;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  transform: translate(-10vmin, 0);
+}
+
+.emotionz:hover {
+  background: url("assets/harry.png");
+  transition: 2s ease-in;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-artist {
+  bottom: 0;
+  position: fixed;
+  transform: translate(80vmin, 20px);
+}
+
+#skew {
+  height: 90vh;
+  width: 48vh;
+  background: url("assets/harry.png");
+  animation: vertical 1s;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: auto;
+}
+
+.green {
+  width: 100vmin;
+  height: 200px;
+  position: relative;
+  opacity: 1;
+  transform: translate(10vmin, 80vh);
+  z-index: -99;
+  background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  animation: 5s horizontal-three infinite; // transition: ease-in-out;
+}
+
+.sparkles {
+  animation: vertical-two 3s;
+  width: 300px;
+  height: 300px;
+  top: -5vh;
+  background: url("assets/sparkles.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: rotate(10deg);
+}
+
+#spark-1 {
+  transform: translate(50vmin, -5vh);
+}
+
+#spark-2 {
+  transform: translate(37vmin, -2vh);
+}
+
+#spark-3 {
+  transform: translate(39vmin, -7vh);
+}
+
+.spotlight {
+  animation: vertical 1s;
+  width: 1900px;
+  height: 1900px;
+  opacity: 0.05;
+  background: url("assets/spotlight.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#spotlight {
+  transform: translate(-30vmin, -25vh) rotate(350deg);
+}
+
+/* ----------------------- Animation -------------------------------------*/
+
+@keyframes horizontal {
+  from {
+    left: -100px;
   }
-  a {
-    text-decoration: none;
-    color: #fff;
+  to {
+    left: 0px;
   }
-  /* //NAVIGATION */
+}
+
+@keyframes horizontal-two {
+  from {
+    left: 300px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes horizontal-three {
+  0% {
+    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  }
+  100% {
+    background-image: linear-gradient(90deg, #1a1f2b30, #03c4a1);
+  }
+}
+
+@keyframes vertical {
+  from {
+    bottom: -50vh;
+  }
+  to {
+    bottom: 0px;
+  } // 0%   {top: 0px; background: red; width: 100px;}
+  // 100% {top: 200px; background: yellow; width: 300px;}
+}
+
+@keyframes vertical-two {
+  from {
+    top: -400px;
+  }
+  to {
+    top: -5vh;
+  }
+}
+
+/* --------------------- NAVIGATION FOR MOBILE ------------------------------------- */
+
+@media screen and (max-width: 600px) {
   .navigation {
-    height: 110vh;
-    margin: -0px 0 0 0;
-    padding: 7px 0 0 0;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    pointer-events: none;
-    position: fixed;
-    background-image: linear-gradient(to right, #482569, #2a46b2);
-    color: rgba($color: #ffffff, $alpha: 0.5);
-    font-size: 200px;
-    cursor: pointer;
-    margin-top: -100px;
-    transition: 0.3s ease-in-out;
+    display: none;
   }
-  ul {
-    list-style-type: none;
+  #toggle {
+    display: none;
   }
   .menu {
-    display: none;
+    margin: 0 auto;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-left: -10vw;
+    margin-top: -5vh;
+    bottom: 0;
+    transform: translate(42vmin, 45vh);
+    position: fixed;
+    z-index: 99;
   }
-  .menu-text {
-    display: none;
+  .menuBtn {
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+    border-radius: 70px;
+    color: white;
+    font-size: 1.4em;
+    overflow: hidden;
+    position: absolute;
   }
-  .nav-link {
-    height: 100px;
-    width: 100%;
-    display: grid;
+  .btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .btn {
+    background: #03a9f4;
     color: #fff;
-    place-items: center;
-    transform: rotate(-90deg);
-    font-size: 1.6rem;
-    pointer-events: auto;
-    transition: 0.3s ease-in;
-    text-transform: uppercase;
-    text-decoration: none;
-    list-style-type: none;
+    font-size: 1.4em;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
-  .nav-link:hover {
-    transform: rotate(0deg);
+  .btn:not(:first-child) {
+    opacity: 0;
+    z-index: -2;
+    transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
   }
-  .navigation:hover {
-    width: 150px;
+  .btn:nth-child(2) {
+    top: 0px;
+    transition-delay: 0s;
+  }
+  .btn:nth-child(3) {
+    top: 0px;
+    left: 0px;
+    transition-delay: 0.1s;
+  }
+  .btn:nth-child(4) {
+    left: 0px;
+    transition-delay: 0.2s;
+  }
+  .btn:nth-child(5) {
+    top: 0px;
+    left: 0px;
+    transition-delay: 0.3s;
+  }
+  .btn:nth-child(6) {
+    top: 0px;
+    transition-delay: 0.4s;
+  }
+  .btn:nth-child(7) {
+    top: 0px;
+    left: 0px;
+    transition-delay: 0.1s;
+  }
+  .btn:nth-child(8) {
+    left: 0px;
+    transition-delay: 0.3s;
+  }
+  .btn:nth-child(9) {
+    top: 0px;
+    left: 0px;
+    transition-delay: 0.2s;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(2) {
+    top: -150px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(3) {
+    top: -100px;
+    left: 100px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(4) {
+    left: 150px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(5) {
+    top: 100px;
+    left: 100px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(6) {
+    top: -75px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(7) {
+    top: -120px;
+    left: -75px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(8) {
+    left: -150px;
+    opacity: 1;
+  }
+  input#toggle:checked~#show-menu .btn:nth-child(9) {
+    top: -70px;
+    left: -130px;
+    opacity: 1;
+  }
+  .menuBtn, .closeBtn {
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  .closeBtn {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  input#toggle:checked~#show-menu .btn .menuBtn {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  input#toggle:checked~#show-menu .btn .closeBtn {
+    transform: translateY(0px);
+    opacity: 1;
   }
   .contain {
     overflow: hidden;
-  }
-  /* //  HOME PAGE */
-  .page-container {
-    overflow: hidden;
-    width: 200vmin;
-    height: 100vh;
-    margin: -32px 0 0 0;
-    background: url("assets/title.png");
-    background-image: url("assets/background.png");
-    padding: 10vh 0 0 20vmin;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    place-items: center;
+  }
+  .page-container {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
   }
   .emotionz {
-    height: 60vh;
-    width: 105vh;
-    background: url("assets/title.png");
-    animation: horizontal 1s;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    pointer-events: none;
-    transform: translate(-10vmin, 0);
-  }
-  .emotionz:hover {
-    background: url("assets/harry.png");
-    transition: 2s ease-in;
+    width: 110vmin;
+    height: 29vh;
+    animation: vertical-two 1s;
+    transform: translate(-78vmin, 10vh);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .home-artist {
-    bottom: 0;
-    position: fixed;
-    transform: translate(80vmin, 20px);
+    transform: translate(0vmin, 0px);
   }
   #skew {
-    height: 90vh;
-    width: 48vh;
-    background: url("assets/harry.png");
-    animation: vertical 1s;
+    height: 50vh;
+    width: 30vh;
+    transform: translate(-0vmin, -0vh);
+    animation: horizontal 1s;
     position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-    pointer-events: auto;
+    z-index: -99;
   }
   .green {
-    width: 100vmin;
-    height: 200px;
-    position: relative;
-    opacity: 1;
-    transform: translate(10vmin, 80vh);
-    z-index: -99;
-    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
-    animation: 5s horizontal-three infinite;
-    // transition: ease-in-out;
-  }
-  .sparkles {
-    animation: vertical-two 3s;
-    width: 300px;
-    height: 300px;
-    top: -5vh;
-    background: url("assets/sparkles.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    transform: rotate(10deg);
-  }
-  #spark-1 {
-    transform: translate(50vmin, -5vh);
-  }
-  #spark-2 {
-    transform: translate(37vmin, -2vh);
-  }
-  #spark-3 {
-    transform: translate(39vmin, -7vh);
-  }
-  .spotlight {
-    animation: vertical 1s;
-    width: 1900px;
-    height: 1900px;
-    opacity: 0.05;
-    background: url("assets/spotlight.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  #spotlight {
-    transform: translate(-30vmin, -25vh) rotate(350deg);
-  }
-  /* //  ANIMATIONS */
-  @keyframes horizontal {
-    from {
-      left: -100px;
-    }
-    to {
-      left: 0px;
-    }
-  }
-  @keyframes horizontal-two {
-    from {
-      left: 300px;
-    }
-    to {
-      left: 0px;
-    }
-  }
-  @keyframes horizontal-three {
-    0% {
-      background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
-    }
-    100% {
-      background-image: linear-gradient(90deg, #1a1f2b30, #03c4a1);
-    }
-  }
-  @keyframes vertical {
-    from {
-      bottom: -50vh;
-    }
-    to {
-      bottom: 0px;
-    }
-    // 0%   {top: 0px; background: red; width: 100px;}
-    // 100% {top: 200px; background: yellow; width: 300px;}
-  }
-  @keyframes vertical-two {
-    from {
-      top: -400px;
-    }
-    to {
-      top: -5vh;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    /* //  NAVIGATION FOR MOBILE */
-    .navigation {
-      display: none;
-    }
-    #toggle {
-      display: none;
-    }
-    .menu {
-      margin: 0 auto;
-      display: block;
-      top: 50%;
-      left: 50%;
-      margin-left: -25px;
-      margin-top: -25px;
-      bottom: 0;
-      transform: translate(42vmin, 45vh);
-      position: fixed;
-      z-index: 99;
-      font-family: "Big Shoulders Stencil Display", cursive;
-    }
-  
-    .btn {
-      width: 70px;
-      height: 70px;
-      border-radius: 70px;
-      overflow: hidden;
-      position: absolute;
-    }
-  
-    .btn {
-      background: #03a9f4;
-      color: #fff;
-      font-size: 1.4em;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-  
-    .btn:not(:first-child) {
-      opacity: 0;
-      z-index: -2;
-      transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
-    }
-  
-    .btn:nth-child(2) {
-      top: 0px;
-      transition-delay: 0s;
-    }
-    .btn:nth-child(3) {
-      top: 0px;
-      left: 0px;
-      transition-delay: 0.1s;
-    }
-    .btn:nth-child(4) {
-      left: 0px;
-      transition-delay: 0.2s;
-    }
-    .btn:nth-child(5) {
-      top: 0px;
-      left: 0px;
-      transition-delay: 0.3s;
-    }
-    .btn:nth-child(6) {
-      top: 0px;
-      transition-delay: 0.4s;
-    }
-    .btn:nth-child(7) {
-      top: 0px;
-      left: 0px;
-      transition-delay: 0.1s;
-    }
-    .btn:nth-child(8) {
-      left: 0px;
-      transition-delay: 0.3s;
-    }
-    .btn:nth-child(9) {
-      top: 0px;
-      left: 0px;
-      transition-delay: 0.2s;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(2) {
-      top: -150px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(3) {
-      top: -100px;
-      left: 100px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(4) {
-      left: 150px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(5) {
-      top: 100px;
-      left: 100px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(6) {
-      top: -75px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(7) {
-      top: -120px;
-      left: -75px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(8) {
-      left: -150px;
-      opacity: 1;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn:nth-child(9) {
-      top: -70px;
-      left: -130px;
-      opacity: 1;
-    }
-  
-    .menuBtn,
-    .closeBtn {
-      position: absolute;
-      transition: all 0.3s ease;
-    }
-  
-    .closeBtn {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn .menuBtn {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    input#toggle:checked ~ #show-menu .btn .closeBtn {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-  
-    /* //  HOME PAGE */
-    .contain {
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-    }
-    .page-container {
-      width: 100%;
-      padding: 0;
-      overflow: hidden;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      place-items: center;
-    }
-    .emotionz {
-      width: 110vmin;
-      height: 29vh;
-      animation: vertical-two 1s;
-      transform: translate(-78vmin, 10vh);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .home-artist {
-      transform: translate(0vmin, 0px);
-    }
-    #skew {
-      height: 50vh;
-      width: 30vh;
-      transform: translate(-0vmin, -0vh);
-      animation: horizontal 1s;
-      position: relative;
-      z-index: -99;
-    }
-    .green {
-      bottom: 0;
-      transform: translate(0vmin, 0vh);
-      position: fixed;
-    }
-    .nav-link{
-      display: none;
-    }
-  }
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
-  /* Events Page  */
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
-  #eventsPage {
-    margin: -32px 0 0 0;
-    padding-left: 160px;
-    background-image: linear-gradient(
-      125deg,
-      #590995,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b,
-      #03c4a1
-    );
-    height: 100%;
-    color: white;
-  }
-  
-  /* ---------------------------- Events Page Columns -------------------- */
-  
-  .eventsPageColumnOne {
-    width: 70vw;
-    display: inline-block;
-  }
-  
-  .eventsPageColumnTwo {
-    width: 20vw;
-    display: inline-block;
+    bottom: 0;
+    transform: translate(0vmin, 0vh);
     position: fixed;
   }
-  
-  /* ---------------------------- Events Page Title -------------------- */
-  
+  .nav-link {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Events Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#eventsPage {
+  margin: -32px 0 0 0;
+  padding-left: 160px;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+/* ---------------------------- Events Page Columns -------------------- */
+
+.eventsPageColumnOne {
+  width: 70vw;
+  display: inline-block;
+}
+
+.eventsPageColumnTwo {
+  width: 20vw;
+  display: inline-block;
+  position: fixed;
+}
+
+/* ---------------------------- Events Page Title -------------------- */
+
+#eventsTitle {
+  padding-left: 50vh;
+}
+
+#eventsPageTitle {
+  font-size: 80px;
+}
+
+#eventsPageSubTitle {
+  font-size: 55px;
+  padding-left: 20vh;
+}
+
+/* ---------------------------- Event Block -------------------- */
+
+#eventsBlockRow {
+  width: 100%;
+}
+
+#eventsBlock {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+/* ---------------------------- Event Side Panel -------------------- */
+
+.eventsEventSidePanel {
+  display: inline-block;
+  width: 100%;
+}
+
+.eventsGenre {
+  width: 100%;
+}
+
+#eventsName {
+  width: 100%;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#eventsNameGenre {
+  width: 100%;
+}
+
+/* ---------------------------- Events Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #eventsPage {
+    padding-left: 20px;
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  }
   #eventsTitle {
-    padding-left: 50vh;
+    padding-left: 0;
   }
-  
   #eventsPageTitle {
-    font-size: 80px;
+    font-size: 40px;
   }
-  
   #eventsPageSubTitle {
-    font-size: 55px;
-    padding-left: 20vh;
+    font-size: 25px;
+    padding-left: 15vh;
   }
-  
-  /* ---------------------------- Artist Block -------------------- */
-  
-  #artistBlockRow {
-    width: 100%;
-  }
-  
   #artistBlock {
-    display: inline-block;
-    margin-left: 80px;
+    margin-left: 5vh;
   }
-  
-  /* ---------------------------- Artist Event Side Panel -------------------- */
-  
-  .artistEventSidePanel {
-    display: inline-block;
-    width: 100%;
+  .eventsPageColumnTwo {
+    display: none;
   }
-  
-  .artistGenre {
-    width: 100%;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Artists Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#artistsPage {
+  margin: -32px 0 0 0;
+  height: 100%;
+  padding-left: 2vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+/* ---------------------------- Events Page Columns -------------------- */
+
+.artistsPageColumnOne {
+  height: 100%;
+  width: 80vw;
+  display: inline-block;
+}
+
+.artistsPageColumnTwo {
+  width: 10vw;
+  display: inline-block;
+  position: fixed;
+}
+
+/* ---------------------------- Events Page Title -------------------- */
+
+#artistsTitle {
+  padding-left: 50vh;
+}
+
+#artistsPageTitle {
+  font-size: 80px;
+}
+
+#artistsPageSubTitle {
+  font-size: 55px;
+  padding-left: 20vh;
+}
+
+/* ---------------------------- Artist Block -------------------- */
+
+#artistBlock {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+/* ---------------------------- Artist Event Side Panel -------------------- */
+
+.artistEventSidePanel {
+  display: inline-block;
+  width: 100%;
+}
+
+.artistGenre {
+  width: 100%;
+}
+
+#genreName {
+  width: 100%;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#artistNameGenre {
+  width: 100%;
+}
+
+/* ---------------------------- Artists Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #artistsPage {
+    padding-left: 20px;
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
-  
-  #genreName {
-    width: 100%;
-    background-image: linear-gradient(
-      to right,
-      rgba(255, 0, 0, 0),
-      rgb(255, 255, 255)
-    );
+  #artistsTitle {
+    padding-left: 0;
   }
-  
-  #artistNameGenre {
-    width: 100%;
+  #artistsPageTitle {
+    font-size: 40px;
   }
-  
-  /* ---------------------------- Events Page Mobile -------------------- */
-  
-  @media screen and (max-width: 600px) {
-    #eventsPage {
-      padding-left: 20px;
-      background-image: linear-gradient(
-        #03c4a1,
-        #1a1f2b,
-        #1a1f2b,
-        #c40337,
-        #1a1f2b
-      );
-    }
-    #eventsTitle {
-      padding-left: 0;
-    }
-    #eventsPageTitle {
-      font-size: 40px;
-    }
-    #eventsPageSubTitle {
-      font-size: 25px;
-      padding-left: 15vh;
-    }
-    #artistBlock {
-      margin-left: 5vh;
-    }
-    .eventsPageColumnTwo {
-      display: none;
-    }
+  #artistsPageSubTitle {
+    font-size: 25px;
+    padding-left: 15vh;
   }
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
-  /* About Us Page  */
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
+  #artistBlock {
+    margin-left: 5vh;
+  }
+  .artistsPageColumnTwo {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* About Us Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#aboutUsPage {
+  margin: -32px 0 0 0;
+  width: 100vw;
+  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100vh;
+}
+
+/* ---------------------------- About Us Styling -------------------- */
+
+.eventZPanel {
+  height: 20vh;
+  width: 80vw;
+  padding-left: 20vw;
+  padding-top: 25vh;
+  position: relative;
+}
+
+#eventZMembersTitle {
+  color: white;
+  font-size: 20vh;
+  position: absolute;
+  top: 10vh;
+  left: 14vw;
+}
+
+.eventZProject {
+  color: white;
+  font-size: 4vh;
+  position: absolute;
+  left: 75vw;
+  height: 50vh;
+  width: 20vw;
+  animation: eventZProjectAnimation linear 5s 1 normal forwards;
+}
+
+@keyframes eventZProjectAnimation {
+  from {
+    top: -50vh;
+  }
+  to {
+    top: 40vh;
+  }
+}
+
+.eventZProjectLinks {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+}
+
+#eventZProjectLinksTitle {
+  color: rgb(25, 139, 233);
+  font-size: 12vh;
+  padding-bottom: 50px;
+}
+
+#groupMember {
+  color: rgb(157, 25, 233);
+  background-image: transparent;
+  padding: 20px;
+  font-size: 18px;
+  animation: groupMemberAnimation linear 4s 1 normal forwards;
+}
+
+@keyframes groupMemberAnimation {
+  from {
+    color: black;
+    left: -50vh;
+  }
+  to {
+    color: rgb(233, 25, 122);
+    left: 72vh;
+  }
+}
+
+/* ---------------------------- About Us Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
   #aboutUsPage {
     margin: -32px 0 0 0;
-    width: 100vw;
-    background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
     height: 100vh;
+    background-image: linear-gradient( 2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   }
-  
-  /* ---------------------------- About Us Styling -------------------- */
-  
   .eventZPanel {
-    height: 20vh;
-    width: 80vw;
-    padding-left: 20vw;
-    padding-top: 25vh;
+    height: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
     position: relative;
   }
-  
+  #eventZGroupImage {
+    width: 380px;
+    padding-left: 20px;
+    padding-top: 20vh;
+  }
   #eventZMembersTitle {
     color: white;
-    font-size: 20vh;
-    position: absolute;
-    top: 10vh;
-    left: 14vw;
+    font-size: 12vh;
   }
-  
   .eventZProject {
     color: white;
-    font-size: 4vh;
+    font-size: 16px;
     position: absolute;
-    left: 75vw;
-    height: 50vh;
-    width: 20vw;
+    top: 120vh;
+    left: 35vw;
+    width: 50vw;
     animation: eventZProjectAnimation linear 5s 1 normal forwards;
   }
-  
   @keyframes eventZProjectAnimation {
     from {
       top: -50vh;
     }
     to {
-      top: 40vh;
+      top: 65vh;
     }
   }
-  
-  .eventZProjectLinks {
-    display: flex;
-    height: 10vh;
-    width: 100%;
-    background-color: black;
-  }
-  
   #eventZProjectLinksTitle {
     color: rgb(25, 139, 233);
-    font-size: 12vh;
-    padding-bottom: 50px;
+    position: absolute;
+    font-size: 16px;
+    padding-left: 50px;
   }
-  
+  .eventZProjectLinks {
+    display: flex;
+    margin-top: 2vh;
+    height: 10vh;
+    width: 100%;
+    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
+  }
+  @keyframes eventZProjectLinksAnimation {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: black;
+    }
+  }
   #groupMember {
     color: rgb(157, 25, 233);
-    background-image: transparent;
-    padding: 20px;
-    font-size: 18px;
+    padding: 8px;
+    font-size: 14px;
     animation: groupMemberAnimation linear 4s 1 normal forwards;
   }
-  
-  @keyframes groupMemberAnimation {
-    from {
-      color: black;
-      left: -50vh;
-    }
-    to {
-      color: rgb(233, 25, 122);
-      left: 72vh;
-    }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Gallery Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.galleryPage {
+  margin: -32px 0 0 0;
+  width: 100vw;
+  background-image: linear-gradient(32deg, #1a1f2b, #1a1f2b, #1a1f2b, #f02e15);
+  height: 100vh;
+}
+
+.artistNameGallery 
+{
+  font-size: 15vh;
+  padding-left: 100px;
+  color: white;
+}
+.wrap {
+  background-image: linear-gradient(to bottom left, #FB811A -20%, #1A1F2B 20%);
+  height: 1000px;
+}
+
+.top-left {
+  background-image: linear-gradient(180deg, #04C5A2, #1A1F2B);
+  height: 200px;
+  width: 500px;
+}
+
+.top-mid {
+  background-image: linear-gradient(180deg, #1A1F2B -30%, #221E33, #EB00FF);
+  height: 200px;
+  width: 300px;
+  margin-left: 24em;
+  margin-top: -4em;
+}
+
+h1 {
+  color: white;
+  font-size: 3vw;
+  margin-left: 5em;
+  margin-top: -2em;
+}
+
+h2 {
+  color: white;
+  margin-left: 10em;
+  font-size: 1.5vw;
+  margin-top: -4em;
+}
+
+h2 span {
+  margin-left: 6em;
+}
+
+.date {
+  margin-left: 0;
+  font-size: 1vw;
+}
+
+.loc {
+  font-size: 1.2vw;
+  margin-left: 10em;
+}
+
+.one-row {
+  margin-left: 46em;
+  margin-top: -14em;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* 404 Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.lostPage {
+  display: grid;
+  padding-left: 120px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+  height: 100vh;
+  background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  animation-name: page-transistion;
+  animation-duration: 3s;
+}
+
+@keyframes page-transistion {
+  from {
+    opacity: 0;
   }
-  
-  /* ---------------------------- About Us Page Mobile -------------------- */
-  
-  @media screen and (max-width: 600px) {
-    #aboutUsPage {
-      margin: -32px 0 0 0;
-      height: 100vh;
-      background-image: linear-gradient(
-        2deg,
-        #b777e8,
-        #1a1f2b,
-        #1a1f2b,
-        #1a1f2b,
-        #1a1f2b,
-        #03c4a1
-      );
-    }
-    .eventZPanel {
-      height: 100%;
-      width: 100%;
-      padding-left: 0;
-      padding-top: 0;
-      position: relative;
-    }
-    #eventZGroupImage {
-      width: 380px;
-      padding-left: 20px;
-      padding-top: 20vh;
-    }
-    #eventZMembersTitle {
-      color: white;
-      font-size: 12vh;
-    }
-    .eventZProject {
-      color: white;
-      font-size: 16px;
-      position: absolute;
-      top: 120vh;
-      left: 35vw;
-      width: 50vw;
-      animation: eventZProjectAnimation linear 5s 1 normal forwards;
-    }
-    @keyframes eventZProjectAnimation {
-      from {
-        top: -50vh;
-      }
-      to {
-        top: 65vh;
-      }
-    }
-    #eventZProjectLinksTitle {
-      color: rgb(25, 139, 233);
-      position: absolute;
-      font-size: 16px;
-      padding-left: 50px;
-    }
-    .eventZProjectLinks {
-      display: flex;
-      margin-top: 2vh;
-      height: 10vh;
-      width: 100%;
-      animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
-    }
-    @keyframes eventZProjectLinksAnimation {
-      from {
-        background-color: transparent;
-      }
-      to {
-        background-color: black;
-      }
-    }
-    #groupMember {
-      color: rgb(157, 25, 233);
-      padding: 8px;
-      font-size: 14px;
-      animation: groupMemberAnimation linear 4s 1 normal forwards;
-    }
+}
+
+#lostPageContent {
+  font-size: 8vh;
+  margin-left: 20vh;
+  display: inline-block;
+}
+
+.lostPageButton {
+  margin-right: 20vh;
+  display: inline-block;
+  background-color: rgb(143, 141, 216);
+  border: none;
+  border-radius: 60px;
+  color: white;
+  color: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  padding: 20px;
+  width: 50%;
+  font-size: 4vh;
+}
+
+.lostPageButton:hover {
+  color: #f0109a;
+  animation: button-animation linear 4s 1 normal forwards;
+}
+
+@keyframes button-animation {
+  to {
+    width: 100%;
   }
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
-  /* 404 Page Styling  */
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
-  .lostPage {
-    display: grid;
-    padding-left: 120px;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    color: white;
-    height: 100vh;
-    background-image: linear-gradient(
-      96deg,
-      #03c4a1,
-      #1a1f2b,
-      #1a1f2b,
-      #c40337,
-      #1a1f2b
-    );
-    animation-name: page-transistion;
-    animation-duration: 3s;
-  }
-  
-  @keyframes page-transistion {
-    from {
-      opacity: 0;
-    }
-  }
-  
-  #lostPageContent {
-    font-size: 8vh;
-    margin-left: 20vh;
-    display: inline-block;
-  }
-  
-  .lostPageButton {
-    margin-right: 20vh;
-    display: inline-block;
-    background-color: rgb(143, 141, 216);
-    border: none;
-    border-radius: 60px;
-    color: white;
-    color: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
-    padding: 20px;
-    width: 50%;
-    font-size: 4vh;
-  }
-  
-  .lostPageButton:hover {
-    color: #f0109a;
-    animation: button-animation linear 4s 1 normal forwards;
-  }
-  
-  @keyframes button-animation {
-    to {
-      width: 100%;
-    }
-  }
-  
-  /* --------------------------------------------------------------------------------------------------------  */
-  
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
