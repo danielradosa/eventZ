@@ -1,64 +1,70 @@
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Entire Body  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 body {
   margin: 0;
   padding: 0;
   background-color: #1a1f2b;
+  padding-top: 0;
 }
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Links  */
+
+/* --------------------------------------------------------------------------------------------------------  */
 
 a {
   text-decoration: none;
   color: #fff;
 }
 
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Navigation  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 .navigation {
-  height: 110vh;
-  margin: 0px 0 0 0;
-  padding: 7px 0 0 0;
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  pointer-events: none;
+  height: 100vh;
+  width: 5vw;
+  display: grid;
   position: fixed;
   background-image: linear-gradient(to right, #482569, #2a46b2);
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 200px;
-  cursor: pointer;
-  margin-top: -100px;
+  font-size: 1.5rem;
   transition: 0.3s ease-in-out;
+  list-style: none;
 }
 
-.menu {
-  display: none;
-}
-
-.menu-text {
-  display: none;
-}
-
-.nav-button {
-  height: 100px;
-  display: grid;
-  color: #fff;
-  place-items: center;
+.nav-link {
+  display: flex;
+  height: 5vh;
+  width: 8vh;
+  color: white;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   transform: rotate(-90deg);
-  font-size: 1.6rem;
-  pointer-events: auto;
   transition: 0.3s ease-in;
-  text-transform: uppercase;
-  text-decoration: none;
+  list-style-type: square;
+  list-style: none;
 }
 
-.nav-button:hover {
+.nav-link:hover {
   transform: rotate(0deg);
 }
 
 .navigation:hover {
-  width: 150px;
+  width: 10vw;
 }
 
-.contain {
-  overflow: hidden;
-}
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Home Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
 
 .page-container {
   overflow: hidden;
@@ -76,8 +82,8 @@ a {
 }
 
 .emotionz {
-  height: 70vh;
-  width: 90vh;
+  height: 60vh;
+  width: 105vh;
   background: url("assets/title.png");
   animation: horizontal 1s;
   position: relative;
@@ -85,6 +91,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
+  transform: translate(-10vmin, 0);
 }
 
 .emotionz:hover {
@@ -102,20 +109,30 @@ a {
 }
 
 #skew {
-  height: 70vh;
-  width: 37vh;
+  height: 90vh;
+  width: 48vh;
   background: url("assets/harry.png");
   animation: vertical 1s;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: rotate(3deg);
   pointer-events: auto;
 }
 
+.green {
+  width: 100vmin;
+  height: 200px;
+  position: relative;
+  opacity: 1;
+  transform: translate(10vmin, 80vh);
+  z-index: -99;
+  background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  animation: 5s horizontal-three infinite; // transition: ease-in-out;
+}
+
 .sparkles {
-  animation: vertical-two 1s;
+  animation: vertical-two 3s;
   width: 300px;
   height: 300px;
   top: -5vh;
@@ -131,11 +148,18 @@ a {
   transform: translate(50vmin, -5vh);
 }
 
+#spark-2 {
+  transform: translate(37vmin, -2vh);
+}
+
+#spark-3 {
+  transform: translate(39vmin, -7vh);
+}
+
 .spotlight {
-  transform: rotate(30deg);
   animation: vertical 1s;
-  width: 1000px;
-  height: 900px;
+  width: 1900px;
+  height: 1900px;
   opacity: 0.05;
   background: url("assets/spotlight.png");
   background-position: center;
@@ -145,8 +169,10 @@ a {
 }
 
 #spotlight {
-  transform: translate(60vmin, -20vh) rotate(350deg);
+  transform: translate(-30vmin, -25vh) rotate(350deg);
 }
+
+/* ----------------------- Animation -------------------------------------*/
 
 @keyframes horizontal {
   from {
@@ -156,6 +182,7 @@ a {
     left: 0px;
   }
 }
+
 @keyframes horizontal-two {
   from {
     left: 300px;
@@ -164,14 +191,26 @@ a {
     left: 0px;
   }
 }
+
+@keyframes horizontal-three {
+  0% {
+    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+  }
+  100% {
+    background-image: linear-gradient(90deg, #1a1f2b30, #03c4a1);
+  }
+}
+
 @keyframes vertical {
   from {
     bottom: -50vh;
   }
   to {
     bottom: 0px;
-  }
+  } // 0%   {top: 0px; background: red; width: 100px;}
+  // 100% {top: 200px; background: yellow; width: 300px;}
 }
+
 @keyframes vertical-two {
   from {
     top: -400px;
@@ -180,29 +219,38 @@ a {
     top: -5vh;
   }
 }
+
+/* --------------------- NAVIGATION FOR MOBILE ------------------------------------- */
+
 @media screen and (max-width: 600px) {
   .navigation {
     display: none;
   }
-
   #toggle {
     display: none;
   }
-
   .menu {
     margin: 0 auto;
     display: block;
     top: 50%;
     left: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
+    margin-left: -10vw;
+    margin-top: -5vh;
     bottom: 0;
     transform: translate(42vmin, 45vh);
     position: fixed;
     z-index: 99;
-    font-family: "Big Shoulders Stencil Display", cursive;
   }
-
+  .menuBtn {
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
+    border-radius: 70px;
+    color: white;
+    font-size: 1.4em;
+    overflow: hidden;
+    position: absolute;
+  }
   .btn {
     width: 70px;
     height: 70px;
@@ -210,7 +258,6 @@ a {
     overflow: hidden;
     position: absolute;
   }
-
   .btn {
     background: #03a9f4;
     color: #fff;
@@ -224,122 +271,104 @@ a {
     align-items: center;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
-
   .btn:not(:first-child) {
     opacity: 0;
     z-index: -2;
     transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
   }
-
   .btn:nth-child(2) {
     top: 0px;
     transition-delay: 0s;
   }
-
   .btn:nth-child(3) {
     top: 0px;
     left: 0px;
     transition-delay: 0.1s;
   }
-
   .btn:nth-child(4) {
     left: 0px;
     transition-delay: 0.2s;
   }
-
   .btn:nth-child(5) {
     top: 0px;
     left: 0px;
     transition-delay: 0.3s;
   }
-
   .btn:nth-child(6) {
     top: 0px;
     transition-delay: 0.4s;
   }
-
   .btn:nth-child(7) {
     top: 0px;
     left: 0px;
     transition-delay: 0.1s;
   }
-
   .btn:nth-child(8) {
     left: 0px;
     transition-delay: 0.3s;
   }
-
   .btn:nth-child(9) {
     top: 0px;
     left: 0px;
     transition-delay: 0.2s;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(2) {
+  input#toggle:checked~#show-menu .btn:nth-child(2) {
     top: -150px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(3) {
+  input#toggle:checked~#show-menu .btn:nth-child(3) {
     top: -100px;
     left: 100px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(4) {
+  input#toggle:checked~#show-menu .btn:nth-child(4) {
     left: 150px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(5) {
+  input#toggle:checked~#show-menu .btn:nth-child(5) {
     top: 100px;
     left: 100px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(6) {
+  input#toggle:checked~#show-menu .btn:nth-child(6) {
     top: -75px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(7) {
+  input#toggle:checked~#show-menu .btn:nth-child(7) {
     top: -120px;
     left: -75px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(8) {
+  input#toggle:checked~#show-menu .btn:nth-child(8) {
     left: -150px;
     opacity: 1;
   }
-
-  input#toggle:checked ~ #show-menu .btn:nth-child(9) {
+  input#toggle:checked~#show-menu .btn:nth-child(9) {
     top: -70px;
     left: -130px;
     opacity: 1;
   }
-
-  .menuBtn,
-.closeBtn {
+  .menuBtn, .closeBtn {
     position: absolute;
     transition: all 0.3s ease;
   }
-
   .closeBtn {
     transform: translateY(50px);
     opacity: 0;
   }
-
-  input#toggle:checked ~ #show-menu .btn .menuBtn {
+  input#toggle:checked~#show-menu .btn .menuBtn {
     transform: translateY(-50px);
     opacity: 0;
   }
-
-  input#toggle:checked ~ #show-menu .btn .closeBtn {
+  input#toggle:checked~#show-menu .btn .closeBtn {
     transform: translateY(0px);
     opacity: 1;
   }
-
+  .contain {
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
   .page-container {
     width: 100%;
     padding: 0;
@@ -348,38 +377,52 @@ a {
     grid-template-rows: 1fr 1fr;
     place-items: center;
   }
-
   .emotionz {
-    width: 90%;
-    height: 40vh;
+    width: 110vmin;
+    height: 29vh;
     animation: vertical-two 1s;
+    transform: translate(-78vmin, 10vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-
   .home-artist {
     transform: translate(0vmin, 0px);
   }
-
   #skew {
     height: 50vh;
     width: 30vh;
-    transform: skewX(10deg);
+    transform: translate(-0vmin, -0vh);
     animation: horizontal 1s;
     position: relative;
     z-index: -99;
   }
+  .green {
+    bottom: 0;
+    transform: translate(0vmin, 0vh);
+    position: fixed;
+  }
+  .nav-link {
+    display: none;
+  }
 }
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 /* Events Page  */
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 #eventsPage {
   margin: -32px 0 0 0;
   padding-left: 160px;
-  background-image: linear-gradient(125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
   color: white;
 }
 
 /* ---------------------------- Events Page Columns -------------------- */
+
 .eventsPageColumnOne {
   width: 70vw;
   display: inline-block;
@@ -392,6 +435,7 @@ a {
 }
 
 /* ---------------------------- Events Page Title -------------------- */
+
 #eventsTitle {
   padding-left: 50vh;
 }
@@ -405,10 +449,107 @@ a {
   padding-left: 20vh;
 }
 
-/* ---------------------------- Artist Block -------------------- */
-#artistBlockRow {
+/* ---------------------------- Event Block -------------------- */
+
+#eventsBlockRow {
   width: 100%;
 }
+
+#eventsBlock {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+/* ---------------------------- Event Side Panel -------------------- */
+
+.eventsEventSidePanel {
+  display: inline-block;
+  width: 100%;
+}
+
+.eventsGenre {
+  width: 100%;
+}
+
+#eventsName {
+  width: 100%;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#eventsNameGenre {
+  width: 100%;
+}
+
+/* ---------------------------- Events Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #eventsPage {
+    padding-left: 20px;
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  }
+  #eventsTitle {
+    padding-left: 0;
+  }
+  #eventsPageTitle {
+    font-size: 40px;
+  }
+  #eventsPageSubTitle {
+    font-size: 25px;
+    padding-left: 15vh;
+  }
+  #artistBlock {
+    margin-left: 5vh;
+  }
+  .eventsPageColumnTwo {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Artists Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#artistsPage {
+  margin: -32px 0 0 0;
+  height: 100%;
+  padding-left: 2vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+/* ---------------------------- Events Page Columns -------------------- */
+
+.artistsPageColumnOne {
+  height: 100%;
+  width: 80vw;
+  display: inline-block;
+}
+
+.artistsPageColumnTwo {
+  width: 10vw;
+  display: inline-block;
+  position: fixed;
+}
+
+/* ---------------------------- Events Page Title -------------------- */
+
+#artistsTitle {
+  padding-left: 50vh;
+}
+
+#artistsPageTitle {
+  font-size: 80px;
+}
+
+#artistsPageSubTitle {
+  font-size: 55px;
+  padding-left: 20vh;
+}
+
+/* ---------------------------- Artist Block -------------------- */
 
 #artistBlock {
   display: inline-block;
@@ -416,6 +557,7 @@ a {
 }
 
 /* ---------------------------- Artist Event Side Panel -------------------- */
+
 .artistEventSidePanel {
   display: inline-block;
   width: 100%;
@@ -427,52 +569,94 @@ a {
 
 #genreName {
   width: 100%;
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), white);
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
 }
 
 #artistNameGenre {
   width: 100%;
 }
 
-/* ---------------------------- Events Page Mobile -------------------- */
-@media screen and (max-width: 600px) {
-  #eventsPage {
-    padding-left: 20px;
-    background-image: linear-gradient(#03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
-  }
+/* ---------------------------- Artists Page Mobile -------------------- */
 
-  #eventsTitle {
+@media screen and (max-width: 600px) {
+  #artistsPage {
+    padding-left: 20px;
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  }
+  #artistsTitle {
     padding-left: 0;
   }
-
-  #eventsPageTitle {
+  #artistsPageTitle {
     font-size: 40px;
   }
-
-  #eventsPageSubTitle {
+  #artistsPageSubTitle {
     font-size: 25px;
     padding-left: 15vh;
   }
-
   #artistBlock {
     margin-left: 5vh;
   }
-
-  .eventsPageColumnTwo {
+  .artistsPageColumnTwo {
     display: none;
   }
 }
+
 /* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Artist Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleArtistPage {
+  margin: -32px 0 0 0;
+  height: 100vh;
+  padding-left: 50vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleArtistPost {
+  padding-left: 60vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Artist Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleArtistPage {
+  margin: -32px 0 0 0;
+  height: 100%;
+  padding-left: 2vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleAristPostContent {
+  background-color: red;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 /* About Us Page  */
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 #aboutUsPage {
   margin: -32px 0 0 0;
   width: 100vw;
-  background-image: linear-gradient(32deg, #B777E8, #1A1F2B, #1A1F2B, #03C4A1);
+  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100vh;
 }
 
 /* ---------------------------- About Us Styling -------------------- */
+
 .eventZPanel {
   height: 20vh;
   width: 80vw;
@@ -507,6 +691,7 @@ a {
     top: 40vh;
   }
 }
+
 .eventZProjectLinks {
   display: flex;
   height: 10vh;
@@ -515,7 +700,7 @@ a {
 }
 
 #eventZProjectLinksTitle {
-  color: #198be9;
+  color: rgb(25, 139, 233);
   font-size: 12vh;
   padding-bottom: 50px;
 }
@@ -538,14 +723,15 @@ a {
     left: 72vh;
   }
 }
+
 /* ---------------------------- About Us Page Mobile -------------------- */
+
 @media screen and (max-width: 600px) {
   #aboutUsPage {
     margin: -32px 0 0 0;
     height: 100vh;
-    background-image: linear-gradient(2deg, #B777E8, #1A1F2B, #1A1F2B, #1A1F2B, #1A1F2B, #03C4A1);
+    background-image: linear-gradient( 2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   }
-
   .eventZPanel {
     height: 100%;
     width: 100%;
@@ -608,62 +794,83 @@ a {
   }
 }
 
-  #eventZMembersTitle {
-    color: white;
-    font-size: 12vh;
-  }
+/* --------------------------------------------------------------------------------------------------------  */
 
-  .eventZProject {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 120vh;
-    left: 35vw;
-    width: 50vw;
-    animation: eventZProjectAnimation linear 5s 1 normal forwards;
-  }
+/* Gallery Page Styling  */
 
-  @keyframes eventZProjectAnimation {
-    from {
-      top: -50vh;
-    }
-    to {
-      top: 65vh;
-    }
-  }
-  #eventZProjectLinksTitle {
-    color: #198be9;
-    position: absolute;
-    font-size: 16px;
-    padding-left: 50px;
-  }
+/* --------------------------------------------------------------------------------------------------------  */
 
-  .eventZProjectLinks {
-    display: flex;
-    margin-top: 2vh;
-    height: 10vh;
-    width: 100%;
-    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
-  }
-
-  @keyframes eventZProjectLinksAnimation {
-    from {
-      background-color: transparent;
-    }
-    to {
-      background-color: black;
-    }
-  }
-  #groupMember {
-    color: #9d19e9;
-    padding: 8px;
-    font-size: 14px;
-    animation: groupMemberAnimation linear 4s 1 normal forwards;
-  }
+.galleryPage {
+  margin: -32px 0 0 0;
+  width: 100vw;
+  background-image: linear-gradient(32deg, #1a1f2b, #1a1f2b, #1a1f2b, #f02e15);
+  height: 100vh;
 }
+
+.artistNameGallery {
+  font-size: 15vh;
+  padding-left: 100px;
+  color: white;
+}
+
+.wrap {
+  background-image: linear-gradient(to bottom left, #FB811A -20%, #1A1F2B 20%);
+  height: 1000px;
+}
+
+.top-left {
+  background-image: linear-gradient(180deg, #04C5A2, #1A1F2B);
+  height: 200px;
+  width: 500px;
+}
+
+.top-mid {
+  background-image: linear-gradient(180deg, #1A1F2B -30%, #221E33, #EB00FF);
+  height: 200px;
+  width: 300px;
+  margin-left: 24em;
+  margin-top: -4em;
+}
+
+h1 {
+  color: white;
+  font-size: 3vw;
+  margin-left: 5em;
+  margin-top: -2em;
+}
+
+h2 {
+  color: white;
+  margin-left: 10em;
+  font-size: 1.5vw;
+  margin-top: -4em;
+}
+
+h2 span {
+  margin-left: 6em;
+}
+
+.date {
+  margin-left: 0;
+  font-size: 1vw;
+}
+
+.loc {
+  font-size: 1.2vw;
+  margin-left: 10em;
+}
+
+.one-row {
+  margin-left: 46em;
+  margin-top: -14em;
+}
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 /* 404 Page Styling  */
+
 /* --------------------------------------------------------------------------------------------------------  */
+
 .lostPage {
   display: grid;
   padding-left: 120px;
@@ -672,7 +879,7 @@ a {
   margin: 0;
   color: white;
   height: 100vh;
-  background-image: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   animation-name: page-transistion;
   animation-duration: 3s;
 }
@@ -682,6 +889,7 @@ a {
     opacity: 0;
   }
 }
+
 #lostPageContent {
   font-size: 8vh;
   margin-left: 20vh;
@@ -691,7 +899,7 @@ a {
 .lostPageButton {
   margin-right: 20vh;
   display: inline-block;
-  background-color: #8f8dd8;
+  background-color: rgb(143, 141, 216);
   border: none;
   border-radius: 60px;
   color: white;

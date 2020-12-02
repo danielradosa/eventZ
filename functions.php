@@ -1,46 +1,51 @@
 <?php
 
-function learningWordPress_resources() {
-    wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style('stylesheets/style', get_stylesheet_uri());
+function setup_menus()
+{
+    register_nav_menu("header-menu", __("Header Menu"));
+    register_nav_menu("footer-menu", __("Footer Menu"));
+}
+
+add_action("init", "setup_menus");
+
+function setup_resources() {
+    wp_register_style( "my-theme-style", get_template_directory_uri() . "/style.css" );
+    wp_enqueue_style("my-theme-style");
 
 }
 
-add_action('wp_enqueue_scripts', 'learningWordPress_resources');
+add_action("wp_enqueue_scripts", "setup_resources");
 
-//Navigation Menus
-
-
-function get_top_ancestor_id() {
-
-    global $post;
-
-    if ($post -> post_parent) {
-        $ancestors = array_reverse(get_post_ancestors($post->ID));
-        return $ancestors[0];
-    }
-    return $post->ID;
+/*
+* Define a constant path to our single template folder
+*/
+define(SINGLE_PATH, TEMPLATEPATH . '/single');
+ 
+/**
+* Filter the single_template with our custom function
+*/
+add_filter('single_template', 'my_single_template');
+ 
+/**
+* Single template function which will choose our template
+*/
+function my_single_template($single) {
+global $wp_query, $post;
+ 
+/**
+* Checks for single template by category
+* Check by category slug and ID
+*/
+foreach((array)get_the_category() as $cat) :
+ 
+if(file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
+return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
+ 
+elseif(file_exists(SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php'))
+return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
+ 
+endforeach;
 }
-function has_children(){
-    global $post;
-    $pages = get_pages('child_of=' . $post -> ID);
-    return count($pages);
-}
-function custom_excerpt_length() {
-    return 10;
-}
-add_filter('excerpt_length', 'custom_excerpt_length'); 
-
-function eventZ_setup() {
-
-    register_nav_menus(array(
-        'primary' => __('Primary Menu'),
-        'footer' => __('Footer Menu'),
-    ));
-
-    add_theme_support('post-thumbnails');
-    add_image_size('small-thumbnail', 40, 80, true);
-}
-add_action('after_setup_theme' , 'eventZ_setup');
 
 ?>
+

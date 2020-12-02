@@ -6,12 +6,20 @@ if (have_posts()) :
     <div class="page-container">
         
     <div class="emotionz"> 
-        <div class="sparkles"><div class="sparkles" id="spark-1"><div class="sparkles" id="spark-1"><div class="sparkles" id="spark-1"></div></div></div></div>
-      
-        <div class="spotlight" id="spotlight"></div>
-        
-        <div class="home-artist"><div id="skew"></div></div>
+        <div class="sparkles">
+            <div class="sparkles" id="spark-2">
+                <div class="sparkles" id="spark-3">
+                    <div class="sparkles" id="spark-1">
+                    </div>
+                </div>
+            </div>
         </div>
+        </div>
+        <div class="spotlight" id="spotlight">
+           </div>
+        
+       <div class="home-artist"><div id="skew"> <div class="green"></div></div></div>
+        
     </div>
     </div>
 <?php endwhile;
