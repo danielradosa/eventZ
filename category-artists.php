@@ -13,7 +13,8 @@
             <!-- Events Row --> 
                 <?php if (have_posts()): ?>
     	            <?php while (have_posts()): the_post()?>
-                        <div id="artistBlock" href="<?php the_permalink()?>">
+                    
+                        <div id="artistBlock">
                             <div id="artistEventDate">
                                 <span class="entry-date"><?php echo get_the_date(); ?></span>
                             </div>
@@ -21,7 +22,7 @@
                             <p><?php the_content()?></p>
                          </div>
                         <div id="artistName">
-                             <h3><?php the_title()?></h3>
+                            <a href="<?php the_permalink()?>"><?php the_title()?></a>
                          </div>
                         </div>
 				    <?php endwhile;?>

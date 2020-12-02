@@ -603,6 +603,47 @@ a {
 
 /* --------------------------------------------------------------------------------------------------------  */
 
+/* Single Artist Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleArtistPage {
+  margin: -32px 0 0 0;
+  height: 100vh;
+  padding-left: 50vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleArtistPost {
+  padding-left: 60vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Artist Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleArtistPage {
+  margin: -32px 0 0 0;
+  height: 100%;
+  padding-left: 2vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleAristPostContent {
+  background-color: red;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 /* About Us Page  */
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -766,12 +807,12 @@ a {
   height: 100vh;
 }
 
-.artistNameGallery 
-{
+.artistNameGallery {
   font-size: 15vh;
   padding-left: 100px;
   color: white;
 }
+
 .wrap {
   background-image: linear-gradient(to bottom left, #FB811A -20%, #1A1F2B 20%);
   height: 1000px;
@@ -823,7 +864,6 @@ h2 span {
   margin-left: 46em;
   margin-top: -14em;
 }
-
 
 /* --------------------------------------------------------------------------------------------------------  */
 

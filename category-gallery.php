@@ -15,6 +15,7 @@
                 </div>
                     <h2><?php the_field('artist-event-venue-gallery');?> </h2>
                         <br> 
+                        
                             <h2><span><?php the_field('artist-event-venue-gallery');?></span>
                            </h2>
                          <br>
@@ -23,7 +24,6 @@
                            </h3>
                         <br>  
                             <h2>
-                                
                                 <span class="date"><?php echo get_the_date(); ?></span>
                             </h2>
                     <div class="one-row">
