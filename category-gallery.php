@@ -32,12 +32,8 @@
 				    <?php endwhile;?>
                  <?php endif;?>
             </div>
+        </div>
     </div>
-       
-
-    </div>
-
-	
 </div>
 
 <?php get_footer(); ?>
