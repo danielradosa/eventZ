@@ -425,14 +425,7 @@ ul {
 #eventsPage {
   margin: -32px 0 0 0;
   padding-left: 160px;
-  background-image: linear-gradient(
-    125deg,
-    #590995,
-    #1a1f2b,
-    #1a1f2b,
-    #1a1f2b,
-    #03c4a1
-  );
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
   color: white;
 }
@@ -465,38 +458,34 @@ ul {
   padding-left: 20vh;
 }
 
-/* ---------------------------- Artist Block -------------------- */
+/* ---------------------------- Event Block -------------------- */
 
-#artistBlockRow {
+#eventsBlockRow {
   width: 100%;
 }
 
-#artistBlock {
+#eventsBlock {
   display: inline-block;
   margin-left: 80px;
 }
 
-/* ---------------------------- Artist Event Side Panel -------------------- */
+/* ---------------------------- Event Side Panel -------------------- */
 
-.artistEventSidePanel {
+.eventsEventSidePanel {
   display: inline-block;
   width: 100%;
 }
 
-.artistGenre {
+.eventsGenre {
   width: 100%;
 }
 
-#genreName {
+#eventsName {
   width: 100%;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgb(255, 255, 255)
-  );
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
 }
 
-#artistNameGenre {
+#eventsNameGenre {
   width: 100%;
 }
 
@@ -505,13 +494,7 @@ ul {
 @media screen and (max-width: 600px) {
   #eventsPage {
     padding-left: 20px;
-    background-image: linear-gradient(
-      #03c4a1,
-      #1a1f2b,
-      #1a1f2b,
-      #c40337,
-      #1a1f2b
-    );
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
   #eventsTitle {
     padding-left: 0;
@@ -529,6 +512,269 @@ ul {
   .eventsPageColumnTwo {
     display: none;
   }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Artists Page  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+#artistsPage {
+  margin: -32px 0 0 0;
+  height: 100%;
+  padding-left: 2vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+/* ---------------------------- Events Page Columns -------------------- */
+
+.artistsPageColumnOne {
+  height: 100%;
+  width: 80vw;
+  display: inline-block;
+}
+
+.artistsPageColumnTwo {
+  width: 10vw;
+  display: inline-block;
+  position: fixed;
+}
+
+/* ---------------------------- Events Page Title -------------------- */
+
+#artistsTitle {
+  padding-left: 50vh;
+}
+
+#artistsPageTitle {
+  font-size: 80px;
+}
+
+#artistsPageSubTitle {
+  font-size: 55px;
+  padding-left: 20vh;
+}
+
+/* ---------------------------- Artist Block -------------------- */
+
+#artistBlock {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+#artistBlock:hover {
+  background-color: black;
+  display: inline-block;
+  margin-left: 80px;
+}
+
+/* ---------------------------- Artist Event Side Panel -------------------- */
+
+.artistEventSidePanel {
+  display: inline-block;
+  width: 100%;
+}
+
+.artistGenre {
+  width: 100%;
+}
+
+#genreName {
+  width: 100%;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#artistNameGenre {
+  width: 100%;
+}
+
+/* ---------------------------- Artists Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #artistsPage {
+    padding-left: 20px;
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  }
+  #artistsTitle {
+    padding-left: 0;
+  }
+  #artistsPageTitle {
+    font-size: 40px;
+  }
+  #artistsPageSubTitle {
+    font-size: 25px;
+    padding-left: 15vh;
+  }
+  #artistBlock {
+    margin-left: 5vh;
+  }
+  .artistsPageColumnTwo {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Artist Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleArtistPage {
+  margin: -32px 0 0 0;
+  height: 200vh;
+  padding-left: 5vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+.singleArtistPostTitle {
+  padding-left: 15vw;
+  font-size: 15vh;
+}
+
+/* ---------------------------- Single Artist Rows -------------------- */
+
+.singleArtistRow {
+  display: flex;
+  padding-left: 5vw;
+  height: 100vh;
+  width: 100vw;
+}
+
+.singleArtistRow2 {
+  display: flex;
+  padding-left: 5vw;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+/* ---------------------------- Single Artist Columns -------------------- */
+
+.singleArtistCol1 {
+  height: 50vh;
+  width: 50vw;
+  display: inline-block;
+}
+
+.singleArtistCol2 {
+  height: 100%;
+  width: 50vw;
+  display: inline-block;
+  background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+}
+
+.singleArtistCol3 {
+  height: 100%;
+  width: 50vw;
+  display: inline-block;
+  background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
+}
+
+.singleArtistCol4 {
+  height: 100%;
+  width: 50vw;
+  display: inline-block;
+  background-image: linear-gradient( 125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce );
+}
+
+/* ---------------------------- Single Artist Details -------------------- */
+
+.artistCoverImage {}
+
+.ArtistEventPrice {
+  align-items: right;
+  padding: 20px;
+}
+
+.ArtistEventTime {
+  padding: 20px;
+}
+
+.ArtistEventLocation {
+  padding: 20px;
+}
+
+.numberOfAttendees {
+  padding: 20px;
+}
+
+.artistEventLength {
+  padding: 20px;
+}
+
+.artistEventVenueGallery {
+  padding: 20px;
+}
+
+/* ---------------------------- Spotify Discovery Details -------------------- */
+
+.artistDescription {
+  padding-left: 5vw;
+}
+
+/* ---------------------------- Spotify Discovery Details -------------------- */
+
+#discoveryTab {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  padding-left: 5vw;
+}
+
+.spotifyDiscoveryTab {
+  padding-left: 2vw;
+  display: grid;
+}
+
+.wikipediaDiscoveryTab {
+  padding-left: 2vw;
+  display: grid;
+}
+
+/* ---------------------------- Single Artist Button Styling  -------------------- */
+
+.shareButton {
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  width: 10vw;
+  height: 4vh;
+  background-color: #C62A88;
+}
+
+.buyButton {
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  width: 10vw;
+  height: 4vh;
+  background-color: #03C4A1;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Single Event Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleEventPage {
+  margin: -32px 0 0 0;
+  height: 100%;
+  padding-left: 5vw;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleEventPostContent {
+  background-color: red;
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -551,7 +797,6 @@ ul {
   width: 80vw;
   padding-left: 20vw;
   padding-top: 25vh;
-  position: relative;
 }
 
 #eventZMembersTitle {
@@ -566,10 +811,10 @@ ul {
   color: white;
   font-size: 4vh;
   position: absolute;
-  top: 40vh;
   left: 75vw;
   height: 50vh;
   width: 20vw;
+  animation: eventZProjectAnimation linear 5s 1 normal forwards;
 }
 
 @keyframes eventZProjectAnimation {
@@ -619,15 +864,7 @@ ul {
   #aboutUsPage {
     margin: -32px 0 0 0;
     height: 100vh;
-    background-image: linear-gradient(
-      2deg,
-      #b777e8,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b,
-      #03c4a1
-    );
+    background-image: linear-gradient( 2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   }
   .eventZPanel {
     height: 100%;
@@ -693,6 +930,77 @@ ul {
 
 /* --------------------------------------------------------------------------------------------------------  */
 
+/* Gallery Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.galleryPage {
+  margin: -32px 0 0 0;
+  width: 100vw;
+  background-image: linear-gradient(32deg, #1a1f2b, #1a1f2b, #1a1f2b, #f02e15);
+  height: 100vh;
+}
+
+.artistNameGallery {
+  font-size: 15vh;
+  padding-left: 100px;
+  color: white;
+}
+
+.wrap {
+  background-image: linear-gradient(to bottom left, #FB811A -20%, #1A1F2B 20%);
+  height: 1000px;
+}
+
+.top-left {
+  background-image: linear-gradient(180deg, #04C5A2, #1A1F2B);
+  height: 200px;
+  width: 500px;
+}
+
+.top-mid {
+  background-image: linear-gradient(180deg, #1A1F2B -30%, #221E33, #EB00FF);
+  height: 200px;
+  width: 300px;
+  margin-left: 24em;
+  margin-top: -4em;
+}
+
+h1 {
+  color: white;
+  font-size: 3vw;
+  margin-left: 5em;
+  margin-top: -2em;
+}
+
+h2 {
+  color: white;
+  margin-left: 10em;
+  font-size: 1.5vw;
+  margin-top: -4em;
+}
+
+h2 span {
+  margin-left: 6em;
+}
+
+.date {
+  margin-left: 0;
+  font-size: 1vw;
+}
+
+.loc {
+  font-size: 1.2vw;
+  margin-left: 10em;
+}
+
+.one-row {
+  margin-left: 46em;
+  margin-top: -14em;
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
 /* 404 Page Styling  */
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -705,14 +1013,7 @@ ul {
   margin: 0;
   color: white;
   height: 100vh;
-  background-image: linear-gradient(
-    96deg,
-    #03c4a1,
-    #1a1f2b,
-    #1a1f2b,
-    #c40337,
-    #1a1f2b
-  );
+  background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   animation-name: page-transistion;
   animation-duration: 3s;
 }
@@ -752,5 +1053,3 @@ ul {
     width: 100%;
   }
 }
-
-/* --------------------------------------------------------------------------------------------------------  */
