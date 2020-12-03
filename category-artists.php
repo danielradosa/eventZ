@@ -8,12 +8,11 @@
                 all in one place
             </div>
         </div>
-        <!-- left Column --> 
+    <!-- left Column --> 
         <div class="artistsPageColumnOne">
             <!-- Events Row --> 
                 <?php if (have_posts()): ?>
     	            <?php while (have_posts()): the_post()?>
-                    
                         <div id="artistBlock">
                             <div id="artistEventDate">
                                 <span class="entry-date"><?php echo get_the_date(); ?></span>
@@ -70,7 +69,7 @@
               </div> 
                <div class="artistGenre">
                   <div id="genreName">
-                      <h1>R&B</h1>
+                      <h1>R and B</h1>
                   </div>
                   <div id="artistNameGenre">
                       <p>Barack Obana</p>
@@ -78,10 +77,6 @@
                   </div>
               </div> 
         </div>
-    </div>
-        
-        
-    </div>
+    </div>        
 </div>
-
 <?php get_footer(); ?>

@@ -6,7 +6,7 @@
         <?php while (have_posts()): the_post()?>
 		            <div class="singleEventPostTitle">
 		        <h1>
-				    <?php the_title()?></a>
+				    <?php the_title()?>
                 </h1>
                     <hr>
 		        </div>

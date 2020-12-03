@@ -11,6 +11,5 @@ get_header();
        <button class="lostPageButton" onclick="location.href='index.php'"> Click here to get back to the party </button>
 </div>
 
-</div>
 <?php get_footer();  ?>
 

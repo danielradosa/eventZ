@@ -22,22 +22,19 @@
 ?>
 
 </div>
-    </div>
-    <div class="menu">
-        <input type="checkbox" id="toggle" />
+<div class="menu">
+    <input type="checkbox" id="toggle" />
         <label id="show-menu" for="toggle">
             <div class="menuBtn">
                 MENU
             </div>
             <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'primary',
-                        'link_before' =>'<div class="btn">',      
-                        'link_after' =>'</div>', 
-                        'items_wrap' => '%3$s'
-                    ));
-            ?>                
-            </div>
-  
-        </label>
-    </div>
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'link_before' =>'<div class="btn">',      
+                    'link_after' =>'</div>', 
+                    'items_wrap' => '%3$s'
+                ));
+            ?>  
+        </label>                  
+</div>

@@ -8,7 +8,6 @@
             </div>
             <div class="artistNameGallery">
                     <?php the_title()?>
-                   
             </div>
                 <div class="top-mid">
 
@@ -32,8 +31,4 @@
 				    <?php endwhile;?>
                  <?php endif;?>
             </div>
-        </div>
-    </div>
-</div>
-
 <?php get_footer(); ?>

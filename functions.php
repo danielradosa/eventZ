@@ -11,7 +11,6 @@ add_action("init", "setup_menus");
 function setup_resources() {
     wp_register_style( "my-theme-style", get_template_directory_uri() . "/style.css" );
     wp_enqueue_style("my-theme-style");
-
 }
 
 add_action("wp_enqueue_scripts", "setup_resources");
@@ -30,8 +29,6 @@ add_filter('single_template', 'my_single_template');
 * Single template function which will choose our template
 */
 function my_single_template($single) {
-global $wp_query, $post;
- 
 /**
 * Checks for single template by category
 * Check by category slug and ID
