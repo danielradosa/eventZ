@@ -32,26 +32,15 @@
             <div class="btn">
                 <p class="mobile-nav-text">  MENU</p> 
             </div>
-            <div class="btn">
-            <a href="home">HOME</a>              
-            </div>
-            <div class="btn">
-                        
-            </div>
-            <div class="btn">
-                        
-            </div>
-            <div class="btn">
-                     
-            </div>
-            <div class="btn">
-            <a href="events">EVENTS</a> 
-            </div>
-            <div class="btn">
-                <a href="artists">ARTISTS</a>              
-            </div>
-            <div class="btn">
-                <a href="about">ABOUT</a>             
-            </div>
+        
+        
+            <?php
+    wp_nav_menu(array(
+        'theme_location' => 'mobile',      
+        'link_before' =>'<li class="btn">',      
+        'link_after' =>'</li>', 
+    )); ?>
+            
+         
         </label>
     </div>
