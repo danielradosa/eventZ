@@ -1079,7 +1079,7 @@ ul {
   height: 50vh;
   width: 20vw;
   padding: 15px;
-  z-index: 99;
+
 }
 
 .video {
@@ -1131,20 +1131,46 @@ ul {
     color: rgb(233, 25, 122);
     left: 72vh;
   }
+  
 }
 
 /* ---------------------------- About Us Page Mobile -------------------- */
 
 @media screen and (max-width: 600px) {
+  #aboutUsPage {
+    height: 160vh;
+  }
   .video {
-    width: 90%;
+    width: 100%;
     height: 400px;
+    transform: translate(-20vw, -10vh);
   }
   .eventZPanel {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr
   }
+
+#eventZMembersTitle {
+  font-size: 12vh;
+  top: 24vh;
+}
+.eventZProject {
+  transform: translate(-85vw, -50vh);
+  width: 100vmin;
+  position: relative;
+}
+#eventZProjectLinksTitle {
+  transform: translate(-0vw, -20vh);
+  font-size: 6vh;
+}
+.eventZProjectLinks {
+  z-index: 1;
+  height: 20vh;
+  transform: translate(-20vw, -20vh);
+}
+
+
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
