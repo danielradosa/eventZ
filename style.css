@@ -3,9 +3,11 @@ body {
   padding: 0;
   background-color: #1a1f2b;
 }
-*{
+
+* {
   font-family: 'Bebas Neue', cursive;
 }
+
 a {
   text-decoration: none;
   color: #fff;
@@ -31,7 +33,6 @@ a {
 }
 
 .logo {
-  top: -1vh;
   margin-left: 2vw;
   background-image: url('assets/logobw.svg');
   width: 400px;
@@ -479,22 +480,25 @@ ul {
 /* --------------------------------------------------------------------------------------------------------  */
 
 #eventsPage {
-  margin: -32px 0 0 0;
-  padding-left: 160px;
+  height: 100%;
   background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
+  padding-top: 10vh;
   color: white;
 }
 
 /* ---------------------------- Events Page Columns -------------------- */
 
 .eventsPageColumnOne {
-  width: 70vw;
+  height: 100%;
+  padding-left: 2vw;
+  padding-top: 8vh;
+  width: 80vw;
   display: inline-block;
 }
 
 .eventsPageColumnTwo {
-  width: 20vw;
+  width: 10vw;
   display: inline-block;
   position: fixed;
 }
@@ -502,27 +506,41 @@ ul {
 /* ---------------------------- Events Page Title -------------------- */
 
 #eventsTitle {
-  padding-left: 50vh;
+  background-color: rgba(0, 0, 0, 0.205);
+  z-index: 98;
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #eventsPageTitle {
-  font-size: 80px;
+  font-size: 60px;
 }
 
 #eventsPageSubTitle {
-  font-size: 55px;
-  padding-left: 20vh;
+  font-size: 40px;
+  padding-left: 5vw;
 }
 
 /* ---------------------------- Event Block -------------------- */
 
-#eventsBlockRow {
-  width: 100%;
-}
-
 #eventsBlock {
   display: inline-block;
+  height: 100%;
   margin-left: 80px;
+}
+
+#eventsImage {
+  height: 25vh;
+}
+
+#eventsBlock:hover {
+  background-color: rgba(0, 0, 0, 0.308);
+  display: inline-block;
 }
 
 /* ---------------------------- Event Side Panel -------------------- */
@@ -584,11 +602,12 @@ ul {
   color: white;
 }
 
-/* ---------------------------- Events Page Columns -------------------- */
+/* ---------------------------- Artist Page Columns -------------------- */
 
 .artistsPageColumnOne {
   height: 100%;
-  padding-left: 2vw;
+  padding-left: 10vw;
+  padding-top: 8vh;
   width: 80vw;
   display: inline-block;
 }
@@ -599,37 +618,54 @@ ul {
   position: fixed;
 }
 
-/* ---------------------------- Events Page Title -------------------- */
+/* ---------------------------- Artists Page Title -------------------- */
 
 #artistsTitle {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.205);
   z-index: 98;
-  width: 100vw;
-  padding-left: 50vh;
+  padding-top: 2vh;
+  width: 100%;
+  height: 15vh;
   position: fixed;
   top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #artistsPageTitle {
-  font-size: 80px;
+  padding-top: 1vh;
+  font-size: 60px;
 }
 
 #artistsPageSubTitle {
-  font-size: 55px;
-  padding-left: 20vh;
+  font-size: 40px;
+  padding-left: 5vw;
 }
 
 /* ---------------------------- Artist Block -------------------- */
 
 #artistBlock {
   display: inline-block;
-  margin-left: 80px;
+  background-color: rgba(0, 0, 0, 0.13);
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 #artistBlock:hover {
-  background-color: rgba(0, 0, 0, 0.308);
-  display: inline-block;
-  margin-left: 80px;
+  background-color: rgba(56, 18, 73, 0.842);
+}
+
+#artistEventDate {
+  font-size: 2vh;
+  padding-left: 12vw;
+  color: black;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#artistName {
+  font-size: 5vh;
+  background-image: linear-gradient(-32deg, rgb(125, 14, 252), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(233, 33, 33));
 }
 
 /* ---------------------------- Artist Event Side Panel -------------------- */
@@ -656,22 +692,36 @@ ul {
 
 @media screen and (max-width: 600px) {
   #artistsPage {
-    padding-left: 20px;
     padding-bottom: 5vh;
     background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
   #artistsTitle {
-    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    z-index: 98;
+    padding-top: 2vh;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
   #artistsPageTitle {
-    font-size: 40px;
+    font-size: 5vh;
   }
   #artistsPageSubTitle {
-    font-size: 25px;
-    padding-left: 15vh;
+    font-size: 2vh;
+    padding-left: 25vw;
+  }
+  #artistEventDate {
+    font-size: 2vh;
+    padding-left: 50vw;
+    color: black;
+    background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 255, 255));
   }
   #artistBlock {
-    margin-left: 5vh;
+    margin-left: 2vw;
   }
   .artistsPageColumnTwo {
     display: none;
@@ -685,31 +735,28 @@ ul {
 /* --------------------------------------------------------------------------------------------------------  */
 
 .singleArtistPage {
-  margin: -32px 0 0 0;
   height: 200vh;
-  padding-left: 5vw;
   background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
   color: white;
 }
 
 .singleArtistPostTitle {
-  padding-left: 15vw;
-  font-size: 15vh;
+  height: 12vh;
+  padding-left: 45vw;
+  font-size: 12vh;
 }
 
 /* ---------------------------- Single Artist Rows -------------------- */
 
 .singleArtistRow {
   display: flex;
-  padding-left: 5vw;
   height: 100vh;
   width: 100vw;
 }
 
 .singleArtistRow2 {
   display: flex;
-  padding-left: 5vw;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -719,27 +766,27 @@ ul {
 
 .singleArtistCol1 {
   height: 50vh;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
 }
 
 .singleArtistCol2 {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
   background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
 }
 
 .singleArtistCol3 {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
   background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
 }
 
 .singleArtistCol4 {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
   background-image: linear-gradient( 125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce);
 }
@@ -748,59 +795,41 @@ ul {
 
 .artistCoverImage {}
 
-.ArtistEventPrice {
-  align-items: right;
-  padding: 20px;
+.ArtistEventLocation {
+  padding-left: 2vw;
+}
+
+.ArtistEventLocationDetails {
+  padding-left: 2.5vw;
 }
 
 .ArtistEventTime {
-  padding: 20px;
-}
-
-.ArtistEventLocation {
-  padding: 20px;
-}
-
-.numberOfAttendees {
-  padding: 20px;
-}
-
-.artistEventLength {
-  padding: 20px;
-}
-
-.artistEventVenueGallery {
-  padding: 20px;
-}
-
-/* ---------------------------- Spotify Discovery Details -------------------- */
-
-.artistDescription {
-  padding-left: 5vw;
-}
-
-/* ---------------------------- Spotify Discovery Details -------------------- */
-
-#discoveryTab {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  display: flex;
-  padding-left: 5vw;
-}
-
-.spotifyDiscoveryTab {
   padding-left: 2vw;
-  display: grid;
 }
 
-.wikipediaDiscoveryTab {
-  padding-left: 2vw;
-  display: grid;
+.ArtistEventTimeDetails {
+  padding-left: 2.5vw;
 }
+
+.ArtistEventPrice {
+  padding-left: 2vw;
+}
+
+.ArtistEventPriceDetails {
+  padding-left: 2.5vw;
+}
+
+/* buttons */
 
 /* ---------------------------- Single Artist Button Styling  -------------------- */
 
+.ArtistButtons {
+  padding: 2vh;
+  display: grid;
+}
+
 .shareButton {
+  margin: 20px;
   border-style: none;
   color: white;
   font-size: 2vh;
@@ -810,7 +839,33 @@ ul {
   background-color: #C62A88;
 }
 
+.shareButton:hover {
+  margin: 20px;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  height: 4vh;
+  background-color: #C62A88;
+  animation: shareButton-animation linear 0.3s 1 normal forwards;
+}
+
+@keyframes shareButton-animation {
+  from {
+    background-color: #C62A88;
+    width: 10vw;
+  }
+  to {
+    border-color: rgb(129, 18, 255);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #dd73c2;
+    width: 15vw;
+  }
+}
+
 .buyButton {
+  margin: 20px;
   border-style: none;
   color: white;
   font-size: 2vh;
@@ -818,6 +873,151 @@ ul {
   width: 10vw;
   height: 4vh;
   background-color: #03C4A1;
+}
+
+.buyButton:hover {
+  margin: 20px;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  height: 4vh;
+  background-color: #03C4A1;
+  animation: buyButton-animation linear 0.3s 1 normal forwards;
+}
+
+@keyframes buyButton-animation {
+  from {
+    background-color: #03C4A1;
+    width: 10vw;
+  }
+  to {
+    border-color: rgb(18, 188, 255);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #0b7ce6;
+    width: 15vw;
+  }
+}
+
+#artistEventDetails {
+  padding: 20px;
+  height: 100%;
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #03c4a1);
+}
+
+.numberOfAttendees {
+  padding-left: 2vw;
+}
+
+.artistEventLength {
+  padding-left: 2vw;
+}
+
+.artistEventVenueGallery {
+  padding-left: 2vw;
+}
+
+/* ---------------------------- Spotify Discovery Details -------------------- */
+
+.artistDescription {
+  padding-top: 25vh;
+  padding-left: 15vw;
+}
+
+/* ---------------------------- Spotify Discovery Details -------------------- */
+
+#discoveryTab {
+  height: 10vh;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+  border-radius: 20px 0 0 20px;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.spotifyDiscoveryTab {
+  padding-left: 5vw;
+}
+
+.wikipediaDiscoveryTab {
+  padding-left: 5vw;
+}
+
+/* ----------------------------  Single Artists Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #singleArtistPage {
+    height: 200vh;
+    background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+    height: 100%;
+    color: white;
+  }
+  .singleArtistPostTitle {
+    font-size: 15vh;
+  }
+  /* ---------------------------- Single Artist Rows -------------------- */
+  .singleArtistRow {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+  }
+  .singleArtistRow2 {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+  }
+  /* ---------------------------- Single Artist Columns -------------------- */
+  .singleArtistCol1 {
+    height: 50vh;
+    width: 100%;
+    display: grid;
+  }
+  .singleArtistCol2 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  }
+  .singleArtistCol3 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
+  }
+  .singleArtistCol4 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient( 125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce);
+  }
+  /* ---------------------------- Single Artist Details -------------------- */
+  .artistCoverImage {
+    width: 100%;
+  }
+  .ArtistEventPrice {
+    align-items: right;
+  }
+  .ArtistEventTime {}
+  .ArtistEventLocation {}
+  .numberOfAttendees {}
+  .artistEventLength {}
+  .artistEventVenueGallery {}
+  /* ---------------------------- Spotify Discovery Details -------------------- */
+  .artistDescription {}
+  /* ---------------------------- Spotify Discovery Details -------------------- */
+  #discoveryTab {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    padding-left: 0vw;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -860,6 +1060,7 @@ ul {
   padding-left: 20vw;
   padding-top: 25vh;
 }
+
 #eventZMembersTitle {
   color: white;
   font-size: 20vh;
@@ -867,6 +1068,7 @@ ul {
   top: 13vh;
   left: 24vw;
 }
+
 .eventZProject {
   background: black;
   color: white;
@@ -879,11 +1081,12 @@ ul {
   padding: 15px;
   z-index: 99;
 }
-.video{
+
+.video {
   transform: translate(-10vmin, 0);
   z-index: -99;
-  width: 860px; 
-  height:515px;
+  width: 860px;
+  height: 515px;
 }
 
 @keyframes eventZProjectAnimation {
@@ -894,12 +1097,14 @@ ul {
     top: 40vh;
   }
 }
+
 #eventZProjectLinksTitle {
   transform: translate(5vw, -5vh);
   color: rgb(25, 139, 233);
   font-size: 12vh;
   z-index: 99;
 }
+
 .eventZProjectLinks {
   transform: translate(0, -10vh);
   display: flex;
@@ -908,6 +1113,7 @@ ul {
   background-color: black;
   z-index: -99;
 }
+
 #groupMember {
   color: rgb(157, 25, 233);
   background-image: transparent;
@@ -930,7 +1136,7 @@ ul {
 /* ---------------------------- About Us Page Mobile -------------------- */
 
 @media screen and (max-width: 600px) {
-  .video{
+  .video {
     width: 90%;
     height: 400px;
   }

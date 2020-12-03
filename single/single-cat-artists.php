@@ -13,25 +13,38 @@
                             <?php 
                             $image = get_field('artist-cover-image');
                                 if( !empty( $image ) ): ?>
-                                <img width="500px" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <img class="artistCoverImage" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             <?php endif; ?>
                         </div>
                         <div class="singleArtistCol2">
                                     <div class="ArtistEventLocation">
-                                        <p>Location: <?php the_field('artist-event-location');?></p>                               
+                                        <h3>Location </h3>   
+                                        <div class="ArtistEventLocationDetails">
+                                            <?php the_field('artist-event-location');?>  
+                                        </div>                          
                                     </div>   
                                     <div class="ArtistEventTime">
-                                        <p>Time: <?php the_field('artist-event-time');?></p>                               
+                                        <h3>Time </h3>  
+                                        <div class="ArtistEventTimeDetails">
+                                            <?php the_field('artist-event-time');?>
+                                        </div>                          
                                     </div>   
                                     <div class="ArtistEventPrice">
-                                        <p>Ticket Damage</p>
-                                        <p><?php the_field('artist-event-price');?>dkk - Student Discount</p>
+                                        <h3>Ticket Damage</h3>
+                                        <div class="ArtistEventPriceDetails">
+                                            <?php the_field('artist-event-price');?> dkk
+                                        </div>
+                
                                     </div>
+                                    <br>
+                                    <hr>
                                     <div class="ArtistButtons">
                                         <button class="shareButton">Share</button>
                                         <button class="buyButton">Buy Ticket</button>
                                     </div>
-                                    <div class="numberOfAttendees">
+                                    <br>
+                                    <div id="artistEventDetails">
+                                         <div class="numberOfAttendees">
                                         <p>Number of Attendees: <?php the_field('artist-event-attendance');?></p>
                                     </div>
                                     <div class="artistEventLength">
@@ -39,7 +52,10 @@
                                     </div>
                                     <div class="artistEventVenueGallery"> 
                                         <p>Venue: <?php the_field('artist-event-venue-gallery');?> </p>
-                                    </div>               
+                                    </div>  
+                                    </div>
+                                    
+                                                
                         </div>
                     </div>
                     <div class="singleArtistRow2">
@@ -78,7 +94,6 @@
                 </div>          
 		    <?php endwhile;?>
         <?php endif;?>
-    </div>
-       <p>Single Artist.php</p>     
+    </div> 
 </div>
 <?php get_footer()?>
