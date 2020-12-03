@@ -8,6 +8,28 @@ body {
   font-family: "Bebas Neue", cursive;
 }
 
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* Custom Scrollbar Styling */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 10px;
+  background: #255dc4;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -363,46 +385,45 @@ ul {
     left: 0px;
     transition-delay: 0.2s;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(2) {
+  input#toggle:checked~#show-menu .btn:nth-child(2) {
     top: -175px;
     left: -25px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(3) {
+  input#toggle:checked~#show-menu .btn:nth-child(3) {
     top: -0px;
     left: -0px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(4) {
+  input#toggle:checked~#show-menu .btn:nth-child(4) {
     top: -125px;
     left: -75px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(5) {
+  input#toggle:checked~#show-menu .btn:nth-child(5) {
     top: 100px;
     left: 100px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(6) {
+  input#toggle:checked~#show-menu .btn:nth-child(6) {
     top: -70px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(7) {
+  input#toggle:checked~#show-menu .btn:nth-child(7) {
     top: -120px;
     left: -75px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(8) {
+  input#toggle:checked~#show-menu .btn:nth-child(8) {
     left: -150px;
     opacity: 1;
   }
-  input#toggle:checked ~ #show-menu .btn:nth-child(9) {
+  input#toggle:checked~#show-menu .btn:nth-child(9) {
     top: -70px;
     left: -130px;
     opacity: 1;
   }
-  .menuBtn,
-  .closeBtn {
+  .menuBtn, .closeBtn {
     position: absolute;
     transition: all 0.3s ease;
   }
@@ -410,11 +431,11 @@ ul {
     transform: translateY(50px);
     opacity: 0;
   }
-  input#toggle:checked ~ #show-menu .btn .menuBtn {
+  input#toggle:checked~#show-menu .btn .menuBtn {
     transform: translateY(-50px);
     opacity: 0;
   }
-  input#toggle:checked ~ #show-menu .btn .closeBtn {
+  input#toggle:checked~#show-menu .btn .closeBtn {
     transform: translateY(0px);
     opacity: 1;
   }
@@ -484,31 +505,26 @@ ul {
 
 #eventsPage {
   height: 100%;
-  background-image: linear-gradient(
-    125deg,
-    #590995,
-    #1a1f2b,
-    #1a1f2b,
-    #1a1f2b,
-    #03c4a1
-  );
-  height: 100%;
-  padding-top: 10vh;
+  padding-top: 15vh;
+  width: 100%;
+  background-image: linear-gradient( 125deg, #ffae00, #9900ff, #1a1f2b, #1a1f2b, #1a1f2b, #7d03c4);
   color: white;
 }
 
 /* ---------------------------- Events Page Columns -------------------- */
 
+/* ---------------------------- Events Page Columns -------------------- */
+
 .eventsPageColumnOne {
   height: 100%;
-  padding-left: 2vw;
-  padding-top: 8vh;
-  width: 80vw;
+  padding-left: 10vw;
+  width: 50vw;
   display: inline-block;
 }
 
 .eventsPageColumnTwo {
-  width: 10vw;
+  padding: 8vh;
+  width: auto;
   display: inline-block;
   position: fixed;
 }
@@ -518,6 +534,7 @@ ul {
 #eventsTitle {
   background-color: rgba(0, 0, 0, 0.205);
   z-index: 98;
+  padding-top: 2vh;
   width: 100%;
   height: 15vh;
   position: fixed;
@@ -528,6 +545,7 @@ ul {
 }
 
 #eventsPageTitle {
+  padding-top: 1vh;
   font-size: 60px;
 }
 
@@ -540,55 +558,38 @@ ul {
 
 #eventsBlock {
   display: inline-block;
-  height: 100%;
-  margin-left: 80px;
+  background-color: rgba(0, 0, 0, 0.13);
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 #eventsImage {
-  height: 25vh;
+  width: 100%;
+}
+
+.eventsCoverImage {
+  width: 20vw;
 }
 
 #eventsBlock:hover {
   background-color: rgba(0, 0, 0, 0.308);
-  display: inline-block;
 }
 
 /* ---------------------------- Event Side Panel -------------------- */
 
 .eventsEventSidePanel {
-  display: inline-block;
-  width: 100%;
-}
-
-.eventsGenre {
-  width: 100%;
+  width: 20%;
 }
 
 #eventsName {
-  width: 100%;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgb(255, 255, 255)
-  );
-}
-
-#eventsNameGenre {
-  width: 100%;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(95, 6, 179));
 }
 
 /* ---------------------------- Events Page Mobile -------------------- */
 
 @media screen and (max-width: 600px) {
   #eventsPage {
-    padding-left: 20px;
-    background-image: linear-gradient(
-      #03c4a1,
-      #1a1f2b,
-      #1a1f2b,
-      #c40337,
-      #1a1f2b
-    );
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
   #eventsTitle {
     padding-left: 0;
@@ -610,20 +611,42 @@ ul {
 
 /* --------------------------------------------------------------------------------------------------------  */
 
+/* Single Event Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleEventPage {
+  height: 100%;
+  padding-left: 5vw;
+  background-image: linear-gradient( 125deg, #16a1b9, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleEventPostContent {
+  display: grid;
+  padding-top: 15vh;
+}
+
+.singleEventPostTitle {
+  padding-left: 15vw;
+  font-size: 20vh;
+}
+
+.singleEventDescription
+{
+  padding: 10vh;
+  font-size: 8vh;
+}
+/* --------------------------------------------------------------------------------------------------------  */
+
 /* Artists Page  */
 
 /* --------------------------------------------------------------------------------------------------------  */
 
 #artistsPage {
   height: 100%;
-  background-image: linear-gradient(
-    125deg,
-    #590995,
-    #1a1f2b,
-    #1a1f2b,
-    #1a1f2b,
-    #03c4a1
-  );
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
   padding-top: 10vh;
   color: white;
@@ -685,26 +708,14 @@ ul {
 
 #artistEventDate {
   font-size: 2vh;
-  padding-left: 12vw;
+  padding-left: 16vw;
   color: black;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgba(255, 0, 0, 0),
-    rgb(255, 255, 255)
-  );
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 255, 255));
 }
 
 #artistName {
   font-size: 5vh;
-  background-image: linear-gradient(
-    -32deg,
-    rgb(125, 14, 252),
-    rgba(255, 0, 0, 0),
-    rgba(255, 0, 0, 0),
-    rgba(255, 0, 0, 0),
-    rgb(233, 33, 33)
-  );
+  background-image: linear-gradient( -32deg, rgb(125, 14, 252), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(233, 33, 33));
 }
 
 /* ---------------------------- Artist Event Side Panel -------------------- */
@@ -720,11 +731,7 @@ ul {
 
 #genreName {
   width: 100%;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgb(255, 255, 255)
-  );
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
 }
 
 #artistNameGenre {
@@ -736,13 +743,7 @@ ul {
 @media screen and (max-width: 600px) {
   #artistsPage {
     padding-bottom: 5vh;
-    background-image: linear-gradient(
-      #03c4a1,
-      #1a1f2b,
-      #1a1f2b,
-      #c40337,
-      #1a1f2b
-    );
+    background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
   #artistsTitle {
     background-color: rgba(0, 0, 0, 0.637);
@@ -767,12 +768,7 @@ ul {
     font-size: 2vh;
     padding-left: 50vw;
     color: black;
-    background-image: linear-gradient(
-      to right,
-      rgba(255, 0, 0, 0),
-      rgba(255, 0, 0, 0),
-      rgb(255, 255, 255)
-    );
+    background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 255, 255));
   }
   #artistBlock {
     margin-left: 2vw;
@@ -790,14 +786,7 @@ ul {
 
 .singleArtistPage {
   height: 200vh;
-  background-image: linear-gradient(
-    125deg,
-    #590995,
-    #1a1f2b,
-    #1a1f2b,
-    #1a1f2b,
-    #03c4a1
-  );
+  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
   color: white;
 }
@@ -827,7 +816,7 @@ ul {
 
 .singleArtistCol1 {
   height: 50vh;
-  width: 100%;
+  width: 80vw;
   display: inline-block;
 }
 
@@ -835,14 +824,7 @@ ul {
   height: 100%;
   width: 100%;
   display: inline-block;
-  background-image: linear-gradient(
-    125deg,
-    #951909,
-    #1a1f2b,
-    #1a1f2b,
-    #1a1f2b,
-    #03c4a1
-  );
+  background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
 }
 
 .singleArtistCol3 {
@@ -861,7 +843,8 @@ ul {
 
 /* ---------------------------- Single Artist Details -------------------- */
 
-.artistCoverImage {
+.singleArtistImage {
+  width: 100%;
 }
 
 .ArtistEventLocation {
@@ -1023,15 +1006,7 @@ ul {
 
 @media screen and (max-width: 600px) {
   #singleArtistPage {
-    height: 200vh;
-    background-image: linear-gradient(
-      125deg,
-      #590995,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b,
-      #03c4a1
-    );
+    background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
     height: 100%;
     color: white;
   }
@@ -1059,38 +1034,19 @@ ul {
     height: 100%;
     width: 100%;
     display: grid;
-    background-image: linear-gradient(
-      125deg,
-      #951909,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b,
-      #03c4a1
-    );
+    background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   }
   .singleArtistCol3 {
     height: 100%;
     width: 100%;
     display: grid;
-    background-image: linear-gradient(
-      125deg,
-      #951909,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b
-    );
+    background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
   }
   .singleArtistCol4 {
     height: 100%;
     width: 100%;
     display: grid;
-    background-image: linear-gradient(
-      125deg,
-      #1a1f2b,
-      #1a1f2b,
-      #1a1f2b,
-      #1e56ce
-    );
+    background-image: linear-gradient( 125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce);
   }
   /* ---------------------------- Single Artist Details -------------------- */
   .artistCoverImage {
@@ -1099,19 +1055,13 @@ ul {
   .ArtistEventPrice {
     align-items: right;
   }
-  .ArtistEventTime {
-  }
-  .ArtistEventLocation {
-  }
-  .numberOfAttendees {
-  }
-  .artistEventLength {
-  }
-  .artistEventVenueGallery {
-  }
+  .ArtistEventTime {}
+  .ArtistEventLocation {}
+  .numberOfAttendees {}
+  .artistEventLength {}
+  .artistEventVenueGallery {}
   /* ---------------------------- Spotify Discovery Details -------------------- */
-  .artistDescription {
-  }
+  .artistDescription {}
   /* ---------------------------- Spotify Discovery Details -------------------- */
   #discoveryTab {
     margin-top: 5vh;
@@ -1119,32 +1069,6 @@ ul {
     display: flex;
     padding-left: 0vw;
   }
-}
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-/* Single Event Page Styling  */
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-.singleEventPage {
-  margin: -32px 0 0 0;
-  height: 100%;
-  padding-left: 5vw;
-  background-image: linear-gradient(
-    125deg,
-    #590995,
-    #1a1f2b,
-    #1a1f2b,
-    #1a1f2b,
-    #03c4a1
-  );
-  height: 100%;
-  color: white;
-}
-
-#singleEventPostContent {
-  background-color: red;
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -1281,97 +1205,19 @@ ul {
 
 /* --------------------------------------------------------------------------------------------------------  */
 
-/* Gallery Page Styling  */
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-.galleryPage {
-  margin: -32px 0 0 0;
-  width: 100vw;
-  background-image: linear-gradient(32deg, #1a1f2b, #1a1f2b, #1a1f2b, #f02e15);
-  height: 100vh;
-}
-
-.artistNameGallery {
-  font-size: 15vh;
-  padding-left: 100px;
-  color: white;
-}
-
-.wrap {
-  background-image: linear-gradient(to bottom left, #fb811a -20%, #1a1f2b 20%);
-  height: 1000px;
-}
-
-.top-left {
-  background-image: linear-gradient(180deg, #04c5a2, #1a1f2b);
-  height: 200px;
-  width: 500px;
-}
-
-.top-mid {
-  background-image: linear-gradient(180deg, #1a1f2b -30%, #221e33, #eb00ff);
-  height: 200px;
-  width: 300px;
-  margin-left: 24em;
-  margin-top: -4em;
-}
-
-h1 {
-  color: white;
-  font-size: 3vw;
-  margin-left: 5em;
-  margin-top: -2em;
-}
-
-h2 {
-  color: white;
-  margin-left: 10em;
-  font-size: 1.5vw;
-  margin-top: -4em;
-}
-
-h2 span {
-  margin-left: 6em;
-}
-
-.date {
-  margin-left: 0;
-  font-size: 1vw;
-}
-
-.loc {
-  font-size: 1.2vw;
-  margin-left: 10em;
-}
-
-.one-row {
-  margin-left: 46em;
-  margin-top: -14em;
-}
-
-/* --------------------------------------------------------------------------------------------------------  */
-
 /* 404 Page Styling  */
 
 /* --------------------------------------------------------------------------------------------------------  */
 
 .lostPage {
+  height: 100vh;
   display: grid;
-  padding-left: 120px;
   justify-content: center;
   align-items: center;
   margin: 0;
   color: white;
   height: 100vh;
-  background-image: linear-gradient(
-    96deg,
-    #03c4a1,
-    #1a1f2b,
-    #1a1f2b,
-    #c40337,
-    #1a1f2b
-  );
+  background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   animation-name: page-transistion;
   animation-duration: 3s;
 }
@@ -1384,21 +1230,20 @@ h2 span {
 
 #lostPageContent {
   font-size: 8vh;
-  margin-left: 20vh;
-  display: inline-block;
 }
 
 .lostPageButton {
-  margin-right: 20vh;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(143, 141, 216);
   border: none;
   border-radius: 60px;
   color: white;
-  color: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
-  padding: 20px;
+  padding: 5vw;
+  height: 1vh;
   width: 50%;
-  font-size: 4vh;
+  font-size: 5vh;
 }
 
 .lostPageButton:hover {
@@ -1409,5 +1254,50 @@ h2 span {
 @keyframes button-animation {
   to {
     width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+/* 404 Page Mobile Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+@media screen and (max-width: 600px) {
+  .lostPage {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: white;
+    height: 100vh;
+    background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+    animation-name: page-transistion;
+    animation-duration: 3s;
+  }
+  @keyframes page-transistion {
+    from {
+      opacity: 0;
+    }
+  }
+  #lostPageContent {
+    width: 100%;
+    margin-top: 5vh;
+    height: 10vh;
+    font-size: 2vh;
+  }
+  .lostPageButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(143, 141, 216);
+    border: none;
+    border-radius: 60px;
+    color: white;
+    padding: 5vw;
+    height: 1vh;
+    width: 50%;
+    font-size: 2vh;
   }
 }

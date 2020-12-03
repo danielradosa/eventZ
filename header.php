@@ -35,11 +35,11 @@
         
         
             <?php
-    wp_nav_menu(array(
-        'theme_location' => 'mobile',      
-        'link_before' =>'<li class="btn">',      
-        'link_after' =>'</li>', 
-    )); ?>
+            wp_nav_menu(array(
+                'theme_location' => 'primary',      
+                'link_before' =>'<li class="btn">',      
+                'link_after' =>'</li>', 
+            )); ?>
             
          
         </label>

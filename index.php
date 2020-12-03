@@ -35,6 +35,7 @@ get_header(); // This fxn gets the header.php file and renders it
         <?php next_posts_link("Newer Posts")?>
 	</button>
 	<hr>
+
 	
 </div>
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>

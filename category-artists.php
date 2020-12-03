@@ -16,7 +16,7 @@
                         <a href="<?php the_permalink()?>">
                             <div id="artistBlock">
                                 <div id="artistEventDate">
-                                    <span class="entry-date"><?php echo get_the_date(); ?></span>
+                                    <?php the_field('artist-event-time');?>
                                 </div>
                             <div id="artistImage">
                                 <p><?php the_content()?></p>
