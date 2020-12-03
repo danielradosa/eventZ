@@ -7,7 +7,8 @@
     <title>eventZ </title>
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
-    <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/style.css' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body class="body">
@@ -15,26 +16,42 @@
  
     <?php
     wp_nav_menu(array(
-        'theme_location' => 'primary',      
+        'theme_location' => 'Desktop',      
         'link_before' =>'<li class="nav-link">',      
         'link_after' =>'</li>', 
     ));
 ?>
 
 </div>
-<div class="menu">
-    <input type="checkbox" id="toggle" />
+    </div>
+    <div class="menu-mobile">
+        <input type="checkbox" id="toggle" />
         <label id="show-menu" for="toggle">
-            <div class="menuBtn">
-                MENU
+            <div class="btn">
+                <p>  MENU</p> 
             </div>
-            <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'primary',
-                    'link_before' =>'<div class="btn">',      
-                    'link_after' =>'</div>', 
-                    'items_wrap' => '%3$s'
-                ));
-            ?>  
-        </label>                  
-</div>
+            <div class="btn">
+            <a href="home">HOME</a>              
+            </div>
+            <div class="btn">
+                        
+            </div>
+            <div class="btn">
+                        
+            </div>
+            <div class="btn">
+                     
+            </div>
+            <div class="btn">
+            <a href="events">EVENTS</a> 
+            </div>
+            <div class="btn">
+            <a href="artists">ARTISTS</a>              
+            </div>
+            <div class="btn">
+                <a href="about">ABOUT</a>             
+            </div>
+           
+         
+        </label>
+    </div>
