@@ -16,7 +16,7 @@
 <div class="navigation">
     <?php
     wp_nav_menu(array(
-        'theme_location' => 'Desktop',      
+        'theme_location' => 'primary',      
         'link_before' =>'<li class="nav-link">',      
         'link_after' =>'</li>', 
     ));
@@ -46,12 +46,10 @@
             <a href="events">EVENTS</a> 
             </div>
             <div class="btn">
-            <a href="artists">ARTISTS</a>              
+                <a href="artists">ARTISTS</a>              
             </div>
             <div class="btn">
                 <a href="about">ABOUT</a>             
             </div>
-           
-         
         </label>
     </div>

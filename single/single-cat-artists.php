@@ -49,31 +49,27 @@
                                 <br>
                                 <p><?php the_field('artist-description');?> </p>
                                 <br>
-                                <hr>
-                                 Discovery:
                                 <div id="discoveryTab">
-                                   
+                                   Discovery:
                                     <div class="spotifyDiscoveryTab">
-                                        <a href=""><?php the_field('artist-spotify-link');?><img src="https://cdn0.iconfinder.com/data/icons/social-glyph/30/spotify-480.png" alt="" width="50px"></a> 
+                                        <a href="<?php the_field('artist-spotify-link');?>" target="_blank"><img src="https://cdn0.iconfinder.com/data/icons/social-glyph/30/spotify-480.png" alt="" width="50px"></a> 
                                     </div>
                                     <br>
                                     <div class="wikipediaDiscoveryTab">
-                                        <a href=""><?php the_field('artist-spotify-wikipedia');?><img src="https://image.flaticon.com/icons/png/512/253/253789.png" alt="" width="50px"></a> 
+                                        <a href="<?php the_field('artist-spotify-wikipedia');?>" target="_blank"><img src="https://image.flaticon.com/icons/png/512/253/253789.png" alt="" width="50px"></a> 
                                     </div>
                                 </div>
-                                <hr>
                             </div>  
                         </div>
                         <div class="singleArtistCol4">
                             <div class="artistColumnDetails">
                                 <div id="artistEvent1">
                                 </div>
-                                        <div id="artistEvent2">
-                                                
-                                        </div>
-                                        <div id="artistEvent3">
-                                                
-                                        </div>
+                                <div id="artistEvent2">
+                                </div>
+                                <div id="artistEvent3">
+                                    
+                                </div>
                                     </div>
                                 </div>
                             </div>  
