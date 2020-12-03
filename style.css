@@ -1,48 +1,76 @@
-/* --------------------------------------------------------------------------------------------------------  */
-
-/* Entire Body  */
-
-/* --------------------------------------------------------------------------------------------------------  */
-
 body {
   margin: 0;
   padding: 0;
   background-color: #1a1f2b;
-  padding-top: 0;
+}
+
+* {
+  font-family: "Bebas Neue", cursive;
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
 
-/* Links  */
+/* Custom Scrollbar Styling */
 
 /* --------------------------------------------------------------------------------------------------------  */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 10px;
+  background: #255dc4;
+}
 
 a {
   text-decoration: none;
   color: #fff;
 }
 
-/* --------------------------------------------------------------------------------------------------------  */
-
-/* Navigation  */
-
-/* --------------------------------------------------------------------------------------------------------  */
+/* //NAVIGATION */
 
 .navigation {
   height: 100vh;
-  width: 5vw;
-  display: grid;
+  width: 72px;
+  padding-top: 5vh;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: space-evenly;
   position: fixed;
-  background-image: linear-gradient(to right, #482569, #2a46b2);
-  font-size: 1.5rem;
+  border: 0px;
+  font-size: 2rem;
   transition: 0.3s ease-in-out;
   list-style: none;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.05em;
+  z-index: 99;
+}
+
+.logo {
+  margin-left: 2vw;
+  background-image: url("assets/logobw.svg");
+  width: 400px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  transform: translate(2vmin, 0px);
 }
 
 .nav-link {
-  display: flex;
-  height: 5vh;
-  width: 8vh;
+  height: 100px;
+  width: 100%;
+  display: grid;
+  place-items: center;
   color: white;
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -50,56 +78,85 @@ a {
   transition: 0.3s ease-in;
   list-style-type: square;
   list-style: none;
+  pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .nav-link:hover {
   transform: rotate(0deg);
 }
 
-.navigation:hover {
-  width: 10vw;
+ul {
+  list-style-type: none;
 }
 
-/* --------------------------------------------------------------------------------------------------------  */
+.menu-mobile {
+  display: none;
+}
 
-/* Home Page  */
+.menu-text {
+  display: none;
+}
 
-/* --------------------------------------------------------------------------------------------------------  */
+/* .nav-link {
+  height: 100px;
+  width: 100%;
+  display: grid;
+  color: #fff;
+  place-items: center;
+  transform: rotate(-90deg);
+  font-size: 1.6rem;
+  pointer-events: auto;
+  transition: 0.3s ease-in;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style-type: none;
+} */
+
+.nav-link:hover {
+  transform: rotate(0deg);
+  color: red;
+  transition: 0.5s ease-in-out;
+}
+
+.contain {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* //  HOME PAGE */
 
 .page-container {
   overflow: hidden;
-  width: 200vmin;
-  height: 100vh;
-  margin: -32px 0 0 0;
+  height: 100%;
+  width: 100%;
   background: url("assets/title.png");
   background-image: url("assets/background.png");
-  padding: 10vh 0 0 20vmin;
+  padding: 5vw 0 0 20vmin;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .emotionz {
-  height: 60vh;
-  width: 105vh;
-  background: url("assets/title.png");
+  height: 5vh;
+  width: 100%;
   animation: horizontal 1s;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
-  transform: translate(-10vmin, 0);
+  transform: translate(0vmin, 0);
 }
 
-.emotionz:hover {
-  background: url("assets/harry.png");
-  transition: 2s ease-in;
-  background-position: center;
+.homePageTitle {
+  height: 50vh;
+  width: 50vw;
+  transform: translate(-90vmin, 70vh);
+  background: url("assets/title.png");
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .home-artist {
@@ -111,6 +168,7 @@ a {
 #skew {
   height: 90vh;
   width: 48vh;
+  z-index: 99;
   background: url("assets/harry.png");
   animation: vertical 1s;
   position: relative;
@@ -127,8 +185,23 @@ a {
   opacity: 1;
   transform: translate(10vmin, 80vh);
   z-index: -99;
-  background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
-  animation: 5s horizontal-three infinite; // transition: ease-in-out;
+  animation: 0.01s horizontal-three infinite;
+}
+
+.audience {
+  height: 200px;
+  width: 900px;
+  z-index: -99;
+  bottom: 0;
+  opacity: 0.8;
+  transform: translate(-90vmin, 0px);
+  background-image: url("assets/SL3grad.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  animation: horizontal 1s;
+  animation: vertical-four 8s infinite;
 }
 
 .sparkles {
@@ -156,23 +229,11 @@ a {
   transform: translate(39vmin, -7vh);
 }
 
-.spotlight {
-  animation: vertical 1s;
-  width: 1900px;
-  height: 1900px;
-  opacity: 0.05;
-  background: url("assets/spotlight.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
 #spotlight {
   transform: translate(-30vmin, -25vh) rotate(350deg);
 }
 
-/* ----------------------- Animation -------------------------------------*/
+/* //  ANIMATIONS */
 
 @keyframes horizontal {
   from {
@@ -207,8 +268,7 @@ a {
   }
   to {
     bottom: 0px;
-  } // 0%   {top: 0px; background: red; width: 100px;}
-  // 100% {top: 200px; background: yellow; width: 300px;}
+  }
 }
 
 @keyframes vertical-two {
@@ -220,36 +280,48 @@ a {
   }
 }
 
-/* --------------------- NAVIGATION FOR MOBILE ------------------------------------- */
+@keyframes vertical-four {
+  0% {
+    background-image: url("assets/SL3grad.png");
+  }
+  55% {
+    background-image: url("assets/SL2grad.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background-image: url("assets/SL3grad.png");
+  }
+}
 
 @media screen and (max-width: 600px) {
+  /* //  NAVIGATION FOR MOBILE */
   .navigation {
+    display: none;
+  }
+  .logo {
     display: none;
   }
   #toggle {
     display: none;
   }
-  .menu {
+  .menu-mobile {
     margin: 0 auto;
     display: block;
     top: 50%;
     left: 50%;
-    margin-left: -10vw;
-    margin-top: -5vh;
+    margin-left: -25px;
+    margin-top: -25px;
     bottom: 0;
-    transform: translate(42vmin, 45vh);
+    transform: translate(42vmin, 40vh);
     position: fixed;
     z-index: 99;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 0.05em;
   }
-  .menuBtn {
-    width: 70px;
-    height: 70px;
-    background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
-    border-radius: 70px;
-    color: white;
-    font-size: 1.4em;
-    overflow: hidden;
-    position: absolute;
+  .mobile-nav-text {
+    color: red;
   }
   .btn {
     width: 70px;
@@ -259,7 +331,7 @@ a {
     position: absolute;
   }
   .btn {
-    background: #03a9f4;
+    background: url("assets/title.png");
     color: #fff;
     font-size: 1.4em;
     display: flex;
@@ -286,16 +358,17 @@ a {
     transition-delay: 0.1s;
   }
   .btn:nth-child(4) {
-    left: 0px;
+    left: -0px;
     transition-delay: 0.2s;
   }
   .btn:nth-child(5) {
     top: 0px;
-    left: 0px;
+    left: -500px;
     transition-delay: 0.3s;
   }
   .btn:nth-child(6) {
-    top: 0px;
+    top: -170px;
+    left: -125px;
     transition-delay: 0.4s;
   }
   .btn:nth-child(7) {
@@ -313,16 +386,18 @@ a {
     transition-delay: 0.2s;
   }
   input#toggle:checked~#show-menu .btn:nth-child(2) {
-    top: -150px;
+    top: -175px;
+    left: -25px;
     opacity: 1;
   }
   input#toggle:checked~#show-menu .btn:nth-child(3) {
-    top: -100px;
-    left: 100px;
+    top: -0px;
+    left: -0px;
     opacity: 1;
   }
   input#toggle:checked~#show-menu .btn:nth-child(4) {
-    left: 150px;
+    top: -125px;
+    left: -75px;
     opacity: 1;
   }
   input#toggle:checked~#show-menu .btn:nth-child(5) {
@@ -331,7 +406,7 @@ a {
     opacity: 1;
   }
   input#toggle:checked~#show-menu .btn:nth-child(6) {
-    top: -75px;
+    top: -70px;
     opacity: 1;
   }
   input#toggle:checked~#show-menu .btn:nth-child(7) {
@@ -364,6 +439,7 @@ a {
     transform: translateY(0px);
     opacity: 1;
   }
+  /* //  HOME PAGE */
   .contain {
     overflow: hidden;
     display: grid;
@@ -381,7 +457,15 @@ a {
     width: 110vmin;
     height: 29vh;
     animation: vertical-two 1s;
-    transform: translate(-78vmin, 10vh);
+    transform: translate(-210vmin, 10vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .homePageTitle {
+    width: 45vh;
+    height: 35vh;
+    transform: translate(0vmin, 0);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -398,12 +482,18 @@ a {
     z-index: -99;
   }
   .green {
+    height: 100px;
     bottom: 0;
+    opacity: 0.4;
     transform: translate(0vmin, 0vh);
     position: fixed;
   }
   .nav-link {
     display: none;
+  }
+  .audience {
+    transform: translate(0vmin, 0px);
+    width: 600px;
   }
 }
 
@@ -414,22 +504,27 @@ a {
 /* --------------------------------------------------------------------------------------------------------  */
 
 #eventsPage {
-  margin: -32px 0 0 0;
-  padding-left: 160px;
-  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
+  padding-top: 15vh;
+  width: 100%;
+  background-image: linear-gradient( 125deg, #ffae00, #9900ff, #1a1f2b, #1a1f2b, #1a1f2b, #7d03c4);
   color: white;
 }
 
 /* ---------------------------- Events Page Columns -------------------- */
 
+/* ---------------------------- Events Page Columns -------------------- */
+
 .eventsPageColumnOne {
-  width: 70vw;
+  height: 100%;
+  padding-left: 10vw;
+  width: 50vw;
   display: inline-block;
 }
 
 .eventsPageColumnTwo {
-  width: 20vw;
+  padding: 8vh;
+  width: auto;
   display: inline-block;
   position: fixed;
 }
@@ -437,54 +532,63 @@ a {
 /* ---------------------------- Events Page Title -------------------- */
 
 #eventsTitle {
-  padding-left: 50vh;
+  background-color: rgba(0, 0, 0, 0.205);
+  z-index: 98;
+  padding-top: 2vh;
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #eventsPageTitle {
-  font-size: 80px;
+  padding-top: 1vh;
+  font-size: 60px;
 }
 
 #eventsPageSubTitle {
-  font-size: 55px;
-  padding-left: 20vh;
+  font-size: 40px;
+  padding-left: 5vw;
 }
 
 /* ---------------------------- Event Block -------------------- */
 
-#eventsBlockRow {
+#eventsBlock {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.13);
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#eventsImage {
   width: 100%;
 }
 
-#eventsBlock {
-  display: inline-block;
-  margin-left: 80px;
+.eventsCoverImage {
+  width: 20vw;
+}
+
+#eventsBlock:hover {
+  background-color: rgba(0, 0, 0, 0.308);
 }
 
 /* ---------------------------- Event Side Panel -------------------- */
 
 .eventsEventSidePanel {
-  display: inline-block;
-  width: 100%;
-}
-
-.eventsGenre {
-  width: 100%;
+  width: 20%;
 }
 
 #eventsName {
-  width: 100%;
-  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(255, 255, 255));
-}
-
-#eventsNameGenre {
-  width: 100%;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgb(95, 6, 179));
 }
 
 /* ---------------------------- Events Page Mobile -------------------- */
 
 @media screen and (max-width: 600px) {
   #eventsPage {
-    padding-left: 20px;
     background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
   #eventsTitle {
@@ -507,23 +611,53 @@ a {
 
 /* --------------------------------------------------------------------------------------------------------  */
 
+/* Single Event Page Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+.singleEventPage {
+  height: 100%;
+  padding-left: 5vw;
+  background-image: linear-gradient( 125deg, #16a1b9, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  height: 100%;
+  color: white;
+}
+
+#singleEventPostContent {
+  display: grid;
+  padding-top: 15vh;
+}
+
+.singleEventPostTitle {
+  padding-left: 15vw;
+  font-size: 20vh;
+}
+
+.singleEventDescription
+{
+  padding: 10vh;
+  font-size: 8vh;
+}
+/* --------------------------------------------------------------------------------------------------------  */
+
 /* Artists Page  */
 
 /* --------------------------------------------------------------------------------------------------------  */
 
 #artistsPage {
-  margin: -32px 0 0 0;
   height: 100%;
-  padding-left: 2vw;
   background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
+  padding-top: 10vh;
   color: white;
 }
 
-/* ---------------------------- Events Page Columns -------------------- */
+/* ---------------------------- Artist Page Columns -------------------- */
 
 .artistsPageColumnOne {
   height: 100%;
+  padding-left: 10vw;
+  padding-top: 8vh;
   width: 80vw;
   display: inline-block;
 }
@@ -534,32 +668,54 @@ a {
   position: fixed;
 }
 
-/* ---------------------------- Events Page Title -------------------- */
+/* ---------------------------- Artists Page Title -------------------- */
 
 #artistsTitle {
-  padding-left: 50vh;
+  background-color: rgba(0, 0, 0, 0.205);
+  z-index: 98;
+  padding-top: 2vh;
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #artistsPageTitle {
-  font-size: 80px;
+  padding-top: 1vh;
+  font-size: 60px;
 }
 
 #artistsPageSubTitle {
-  font-size: 55px;
-  padding-left: 20vh;
+  font-size: 40px;
+  padding-left: 5vw;
 }
 
 /* ---------------------------- Artist Block -------------------- */
 
 #artistBlock {
   display: inline-block;
-  margin-left: 80px;
+  background-color: rgba(0, 0, 0, 0.13);
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 #artistBlock:hover {
-  background-color: black;
-  display: inline-block;
-  margin-left: 80px;
+  background-color: rgba(56, 18, 73, 0.842);
+}
+
+#artistEventDate {
+  font-size: 2vh;
+  padding-left: 16vw;
+  color: black;
+  background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 255, 255));
+}
+
+#artistName {
+  font-size: 5vh;
+  background-image: linear-gradient( -32deg, rgb(125, 14, 252), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(233, 33, 33));
 }
 
 /* ---------------------------- Artist Event Side Panel -------------------- */
@@ -586,21 +742,36 @@ a {
 
 @media screen and (max-width: 600px) {
   #artistsPage {
-    padding-left: 20px;
+    padding-bottom: 5vh;
     background-image: linear-gradient( #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   }
   #artistsTitle {
-    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    z-index: 98;
+    padding-top: 2vh;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
   #artistsPageTitle {
-    font-size: 40px;
+    font-size: 5vh;
   }
   #artistsPageSubTitle {
-    font-size: 25px;
-    padding-left: 15vh;
+    font-size: 2vh;
+    padding-left: 25vw;
+  }
+  #artistEventDate {
+    font-size: 2vh;
+    padding-left: 50vw;
+    color: black;
+    background-image: linear-gradient( to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgb(255, 255, 255));
   }
   #artistBlock {
-    margin-left: 5vh;
+    margin-left: 2vw;
   }
   .artistsPageColumnTwo {
     display: none;
@@ -614,31 +785,28 @@ a {
 /* --------------------------------------------------------------------------------------------------------  */
 
 .singleArtistPage {
-  margin: -32px 0 0 0;
   height: 200vh;
-  padding-left: 5vw;
   background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100%;
   color: white;
 }
 
 .singleArtistPostTitle {
-  padding-left: 15vw;
-  font-size: 15vh;
+  height: 12vh;
+  padding-left: 45vw;
+  font-size: 12vh;
 }
 
 /* ---------------------------- Single Artist Rows -------------------- */
 
 .singleArtistRow {
   display: flex;
-  padding-left: 5vw;
   height: 100vh;
   width: 100vw;
 }
 
 .singleArtistRow2 {
   display: flex;
-  padding-left: 5vw;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -648,124 +816,259 @@ a {
 
 .singleArtistCol1 {
   height: 50vh;
-  width: 50vw;
+  width: 80vw;
   display: inline-block;
 }
 
 .singleArtistCol2 {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
   background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
 }
 
 .singleArtistCol3 {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
-  background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
+  background-image: linear-gradient(125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
 }
 
 .singleArtistCol4 {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   display: inline-block;
-  background-image: linear-gradient( 125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce );
+  background-image: linear-gradient(125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce);
 }
 
 /* ---------------------------- Single Artist Details -------------------- */
 
-.artistCoverImage {}
-
-.ArtistEventPrice {
-  align-items: right;
-  padding: 20px;
-}
-
-.ArtistEventTime {
-  padding: 20px;
+.singleArtistImage {
+  width: 100%;
 }
 
 .ArtistEventLocation {
+  padding-left: 2vw;
+}
+
+.ArtistEventLocationDetails {
+  padding-left: 2.5vw;
+}
+
+.ArtistEventTime {
+  padding-left: 2vw;
+}
+
+.ArtistEventTimeDetails {
+  padding-left: 2.5vw;
+}
+
+.ArtistEventPrice {
+  padding-left: 2vw;
+}
+
+.ArtistEventPriceDetails {
+  padding-left: 2.5vw;
+}
+
+/* buttons */
+
+/* ---------------------------- Single Artist Button Styling  -------------------- */
+
+.ArtistButtons {
+  padding: 2vh;
+  display: grid;
+}
+
+.shareButton {
+  margin: 20px;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  width: 10vw;
+  height: 4vh;
+  background-color: #c62a88;
+}
+
+.shareButton:hover {
+  margin: 20px;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  height: 4vh;
+  background-color: #c62a88;
+  animation: shareButton-animation linear 0.3s 1 normal forwards;
+}
+
+@keyframes shareButton-animation {
+  from {
+    background-color: #c62a88;
+    width: 10vw;
+  }
+  to {
+    border-color: rgb(129, 18, 255);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #dd73c2;
+    width: 15vw;
+  }
+}
+
+.buyButton {
+  margin: 20px;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  width: 10vw;
+  height: 4vh;
+  background-color: #03c4a1;
+}
+
+.buyButton:hover {
+  margin: 20px;
+  border-style: none;
+  color: white;
+  font-size: 2vh;
+  border-radius: 50px;
+  height: 4vh;
+  background-color: #03c4a1;
+  animation: buyButton-animation linear 0.3s 1 normal forwards;
+}
+
+@keyframes buyButton-animation {
+  from {
+    background-color: #03c4a1;
+    width: 10vw;
+  }
+  to {
+    border-color: rgb(18, 188, 255);
+    border-style: solid;
+    border-width: 1px;
+    background-color: #0b7ce6;
+    width: 15vw;
+  }
+}
+
+#artistEventDetails {
   padding: 20px;
+  height: 100%;
+  background-image: linear-gradient(125deg, #590995, #1a1f2b, #1a1f2b, #03c4a1);
 }
 
 .numberOfAttendees {
-  padding: 20px;
+  padding-left: 2vw;
 }
 
 .artistEventLength {
-  padding: 20px;
+  padding-left: 2vw;
 }
 
 .artistEventVenueGallery {
-  padding: 20px;
+  padding-left: 2vw;
 }
 
 /* ---------------------------- Spotify Discovery Details -------------------- */
 
 .artistDescription {
-  padding-left: 5vw;
+  padding-top: 25vh;
+  padding-left: 15vw;
 }
 
 /* ---------------------------- Spotify Discovery Details -------------------- */
 
 #discoveryTab {
-  margin-top: 5vh;
+  height: 10vh;
+  margin-top: 2vh;
   margin-bottom: 5vh;
+  color: white;
   display: flex;
-  padding-left: 5vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+  border-radius: 20px 0 0 20px;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .spotifyDiscoveryTab {
-  padding-left: 2vw;
-  display: grid;
+  padding-left: 5vw;
 }
 
 .wikipediaDiscoveryTab {
-  padding-left: 2vw;
-  display: grid;
-}
-
-/* ---------------------------- Single Artist Button Styling  -------------------- */
-
-.shareButton {
-  border-style: none;
-  color: white;
-  font-size: 2vh;
-  border-radius: 50px;
-  width: 10vw;
-  height: 4vh;
-  background-color: #C62A88;
-}
-
-.buyButton {
-  border-style: none;
-  color: white;
-  font-size: 2vh;
-  border-radius: 50px;
-  width: 10vw;
-  height: 4vh;
-  background-color: #03C4A1;
-}
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-/* Single Event Page Styling  */
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-.singleEventPage {
-  margin: -32px 0 0 0;
-  height: 100%;
   padding-left: 5vw;
-  background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
-  height: 100%;
-  color: white;
 }
 
-#singleEventPostContent {
-  background-color: red;
+/* ----------------------------  Single Artists Page Mobile -------------------- */
+
+@media screen and (max-width: 600px) {
+  #singleArtistPage {
+    background-image: linear-gradient( 125deg, #590995, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+    height: 100%;
+    color: white;
+  }
+  .singleArtistPostTitle {
+    font-size: 15vh;
+  }
+  /* ---------------------------- Single Artist Rows -------------------- */
+  .singleArtistRow {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+  }
+  .singleArtistRow2 {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+  }
+  /* ---------------------------- Single Artist Columns -------------------- */
+  .singleArtistCol1 {
+    height: 50vh;
+    width: 100%;
+    display: grid;
+  }
+  .singleArtistCol2 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  }
+  .singleArtistCol3 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient( 125deg, #951909, #1a1f2b, #1a1f2b, #1a1f2b);
+  }
+  .singleArtistCol4 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: linear-gradient( 125deg, #1a1f2b, #1a1f2b, #1a1f2b, #1e56ce);
+  }
+  /* ---------------------------- Single Artist Details -------------------- */
+  .artistCoverImage {
+    width: 100%;
+  }
+  .ArtistEventPrice {
+    align-items: right;
+  }
+  .ArtistEventTime {}
+  .ArtistEventLocation {}
+  .numberOfAttendees {}
+  .artistEventLength {}
+  .artistEventVenueGallery {}
+  /* ---------------------------- Spotify Discovery Details -------------------- */
+  .artistDescription {}
+  /* ---------------------------- Spotify Discovery Details -------------------- */
+  #discoveryTab {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    padding-left: 0vw;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -775,10 +1078,10 @@ a {
 /* --------------------------------------------------------------------------------------------------------  */
 
 #aboutUsPage {
-  margin: -32px 0 0 0;
-  width: 100vw;
-  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100vh;
+  width: auto;
+  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
+  overflow: hidden;
 }
 
 /* ---------------------------- About Us Styling -------------------- */
@@ -788,25 +1091,33 @@ a {
   width: 80vw;
   padding-left: 20vw;
   padding-top: 25vh;
-  position: relative;
 }
 
 #eventZMembersTitle {
   color: white;
   font-size: 20vh;
   position: absolute;
-  top: 10vh;
-  left: 14vw;
+  top: 13vh;
+  left: 24vw;
 }
 
 .eventZProject {
+  background: black;
   color: white;
   font-size: 4vh;
   position: absolute;
-  left: 75vw;
+  left: 65vw;
+  top: 40vh;
   height: 50vh;
   width: 20vw;
-  animation: eventZProjectAnimation linear 5s 1 normal forwards;
+  padding: 15px;
+}
+
+.video {
+  transform: translate(-10vmin, 0);
+  z-index: -99;
+  width: 860px;
+  height: 515px;
 }
 
 @keyframes eventZProjectAnimation {
@@ -818,17 +1129,20 @@ a {
   }
 }
 
+#eventZProjectLinksTitle {
+  transform: translate(5vw, -5vh);
+  color: rgb(25, 139, 233);
+  font-size: 12vh;
+  z-index: 99;
+}
+
 .eventZProjectLinks {
+  transform: translate(0, -10vh);
   display: flex;
   height: 10vh;
   width: 100%;
   background-color: black;
-}
-
-#eventZProjectLinksTitle {
-  color: rgb(25, 139, 233);
-  font-size: 12vh;
-  padding-bottom: 50px;
+  z-index: -99;
 }
 
 #groupMember {
@@ -854,141 +1168,39 @@ a {
 
 @media screen and (max-width: 600px) {
   #aboutUsPage {
-    margin: -32px 0 0 0;
-    height: 100vh;
-    background-image: linear-gradient( 2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+    height: 190vh;
+  }
+  .video {
+    width: 100%;
+    height: 400px;
+    transform: translate(-20vw, -10vh);
   }
   .eventZPanel {
-    height: 100%;
-    width: 100%;
-    padding-left: 0;
-    padding-top: 0;
-    position: relative;
-  }
-  #eventZGroupImage {
-    width: 380px;
-    padding-left: 20px;
-    padding-top: 20vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
   #eventZMembersTitle {
-    color: white;
     font-size: 12vh;
+    top: 24vh;
   }
   .eventZProject {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 120vh;
-    left: 35vw;
-    width: 50vw;
-    animation: eventZProjectAnimation linear 5s 1 normal forwards;
-  }
-  @keyframes eventZProjectAnimation {
-    from {
-      top: -50vh;
-    }
-    to {
-      top: 65vh;
-    }
+    transform: translate(-85vw, -50vh);
+    width: 100vmin;
+    position: relative;
   }
   #eventZProjectLinksTitle {
-    color: rgb(25, 139, 233);
-    position: absolute;
-    font-size: 16px;
-    padding-left: 50px;
+    transform: translate(-0vw, -30vh);
+    font-size: 6vh;
   }
   .eventZProjectLinks {
-    display: flex;
-    margin-top: 2vh;
-    height: 10vh;
-    width: 100%;
-    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: 1;
+    height: 40vh;
+    transform: translate(-20vw, -20vh);
   }
-  @keyframes eventZProjectLinksAnimation {
-    from {
-      background-color: transparent;
-    }
-    to {
-      background-color: black;
-    }
-  }
-  #groupMember {
-    color: rgb(157, 25, 233);
-    padding: 8px;
-    font-size: 14px;
-    animation: groupMemberAnimation linear 4s 1 normal forwards;
-  }
-}
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-/* Gallery Page Styling  */
-
-/* --------------------------------------------------------------------------------------------------------  */
-
-.galleryPage {
-  margin: -32px 0 0 0;
-  width: 100vw;
-  background-image: linear-gradient(32deg, #1a1f2b, #1a1f2b, #1a1f2b, #f02e15);
-  height: 100vh;
-}
-
-.artistNameGallery {
-  font-size: 15vh;
-  padding-left: 100px;
-  color: white;
-}
-
-.wrap {
-  background-image: linear-gradient(to bottom left, #FB811A -20%, #1A1F2B 20%);
-  height: 1000px;
-}
-
-.top-left {
-  background-image: linear-gradient(180deg, #04C5A2, #1A1F2B);
-  height: 200px;
-  width: 500px;
-}
-
-.top-mid {
-  background-image: linear-gradient(180deg, #1A1F2B -30%, #221E33, #EB00FF);
-  height: 200px;
-  width: 300px;
-  margin-left: 24em;
-  margin-top: -4em;
-}
-
-h1 {
-  color: white;
-  font-size: 3vw;
-  margin-left: 5em;
-  margin-top: -2em;
-}
-
-h2 {
-  color: white;
-  margin-left: 10em;
-  font-size: 1.5vw;
-  margin-top: -4em;
-}
-
-h2 span {
-  margin-left: 6em;
-}
-
-.date {
-  margin-left: 0;
-  font-size: 1vw;
-}
-
-.loc {
-  font-size: 1.2vw;
-  margin-left: 10em;
-}
-
-.one-row {
-  margin-left: 46em;
-  margin-top: -14em;
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
@@ -998,14 +1210,14 @@ h2 span {
 /* --------------------------------------------------------------------------------------------------------  */
 
 .lostPage {
+  height: 100vh;
   display: grid;
-  padding-left: 120px;
   justify-content: center;
   align-items: center;
   margin: 0;
   color: white;
   height: 100vh;
-  background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+  background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
   animation-name: page-transistion;
   animation-duration: 3s;
 }
@@ -1018,21 +1230,20 @@ h2 span {
 
 #lostPageContent {
   font-size: 8vh;
-  margin-left: 20vh;
-  display: inline-block;
 }
 
 .lostPageButton {
-  margin-right: 20vh;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(143, 141, 216);
   border: none;
   border-radius: 60px;
   color: white;
-  color: linear-gradient(96deg, #03c4a1, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
-  padding: 20px;
+  padding: 5vw;
+  height: 1vh;
   width: 50%;
-  font-size: 4vh;
+  font-size: 5vh;
 }
 
 .lostPageButton:hover {
@@ -1047,3 +1258,46 @@ h2 span {
 }
 
 /* --------------------------------------------------------------------------------------------------------  */
+
+/* 404 Page Mobile Styling  */
+
+/* --------------------------------------------------------------------------------------------------------  */
+
+@media screen and (max-width: 600px) {
+  .lostPage {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: white;
+    height: 100vh;
+    background-image: linear-gradient( 96deg, #03c4a1, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #c40337, #1a1f2b);
+    animation-name: page-transistion;
+    animation-duration: 3s;
+  }
+  @keyframes page-transistion {
+    from {
+      opacity: 0;
+    }
+  }
+  #lostPageContent {
+    width: 100%;
+    margin-top: 5vh;
+    height: 10vh;
+    font-size: 2vh;
+  }
+  .lostPageButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(143, 141, 216);
+    border: none;
+    border-radius: 60px;
+    color: white;
+    padding: 5vw;
+    height: 1vh;
+    width: 50%;
+    font-size: 2vh;
+  }
+}

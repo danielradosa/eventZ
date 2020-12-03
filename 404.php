@@ -6,7 +6,7 @@ get_header();
 
 <div class="lostPage">
     <div id="lostPageContent">
-               Oh no! Seems like you stepped out of the online night club.. 
+        Oh no! Seems like you stepped out of the online night club.. 
     </div>
        <button class="lostPageButton" onclick="location.href='index.php'"> Click here to get back to the party </button>
 </div>
