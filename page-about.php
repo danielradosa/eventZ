@@ -5,11 +5,14 @@
             <div id="eventZMembersTitle">
                 About Us
             </div>
-            <video width="320" height="240" autoplay>
-                <source src="assets/eventzBGteaser.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
+            <iframe   src="https://www.youtube.com/embed/1N_KTWmCYnU?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture"
+            allowfullscreen
+            class="video"
+            >
+            </iframe>
+                
         </div>
         <div class="eventZProject">
             A group of 4 Multimedia Designers. <br>
@@ -44,13 +47,11 @@
             <div id="groupMember">
                 Penda Svane
                 <br>
-
                 <a href="https://github.com/TheSvaneMan">GitHub</a>
                 <br>
                 <a href="https://www.linkedin.com/in/thesvaneman/">LinkedIn</a>
             </div>
         </div>
-
 
     </div>
     <div id="gradientElement1">

@@ -3,7 +3,9 @@ body {
   padding: 0;
   background-color: #1a1f2b;
 }
-
+*{
+  font-family: 'Bebas Neue', cursive;
+}
 a {
   text-decoration: none;
   color: #fff;
@@ -29,6 +31,7 @@ a {
 }
 
 .logo {
+  top: -1vh;
   margin-left: 2vw;
   background-image: url('assets/logobw.svg');
   width: 400px;
@@ -122,7 +125,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
-  transform: translate(-10vmin, 0);
+  transform: translate(0vmin, 0);
 }
 
 .homePageTitle {
@@ -434,6 +437,14 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .homePageTitle {
+    width: 45vh;
+    height: 35vh;
+    transform: translate(0vmin, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .home-artist {
     transform: translate(0vmin, 0px);
   }
@@ -457,7 +468,7 @@ ul {
   }
   .audience {
     transform: translate(0vmin, 0px);
-    width: 500px;
+    width: 600px;
   }
 }
 
@@ -849,22 +860,30 @@ ul {
   padding-left: 20vw;
   padding-top: 25vh;
 }
-
 #eventZMembersTitle {
   color: white;
   font-size: 20vh;
   position: absolute;
-  top: 10vh;
-  left: 14vw;
+  top: 13vh;
+  left: 24vw;
 }
-
 .eventZProject {
+  background: black;
   color: white;
   font-size: 4vh;
   position: absolute;
-  left: 75vw;
+  left: 65vw;
+  top: 40vh;
   height: 50vh;
   width: 20vw;
+  padding: 15px;
+  z-index: 99;
+}
+.video{
+  transform: translate(-10vmin, 0);
+  z-index: -99;
+  width: 860px; 
+  height:515px;
 }
 
 @keyframes eventZProjectAnimation {
@@ -875,20 +894,20 @@ ul {
     top: 40vh;
   }
 }
-
+#eventZProjectLinksTitle {
+  transform: translate(5vw, -5vh);
+  color: rgb(25, 139, 233);
+  font-size: 12vh;
+  z-index: 99;
+}
 .eventZProjectLinks {
+  transform: translate(0, -10vh);
   display: flex;
   height: 10vh;
   width: 100%;
   background-color: black;
+  z-index: -99;
 }
-
-#eventZProjectLinksTitle {
-  color: rgb(25, 139, 233);
-  font-size: 12vh;
-  padding-bottom: 50px;
-}
-
 #groupMember {
   color: rgb(157, 25, 233);
   background-image: transparent;
@@ -911,61 +930,14 @@ ul {
 /* ---------------------------- About Us Page Mobile -------------------- */
 
 @media screen and (max-width: 600px) {
-  #aboutUsPage {
-    margin: -32px 0 0 0;
-    height: 100vh;
-    background-image: linear-gradient( 2deg, #b777e8, #1a1f2b, #1a1f2b, #1a1f2b, #1a1f2b, #03c4a1);
+  .video{
+    width: 90%;
+    height: 400px;
   }
   .eventZPanel {
-    height: 100%;
-    width: 100%;
-    padding-left: 0;
-    padding-top: 0;
-    position: relative;
-  }
-  #eventZGroupImage {
-    width: 380px;
-    padding-left: 20px;
-    padding-top: 20vh;
-  }
-  #eventZMembersTitle {
-    color: white;
-    font-size: 12vh;
-  }
-  .eventZProject {
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    top: 120vh;
-    left: 35vw;
-    width: 50vw;
-  }
-  #eventZProjectLinksTitle {
-    color: rgb(25, 139, 233);
-    position: absolute;
-    font-size: 16px;
-    padding-left: 50px;
-  }
-  .eventZProjectLinks {
-    display: flex;
-    margin-top: 2vh;
-    height: 10vh;
-    width: 100%;
-    animation: eventZProjectLinksAnimation linear 5s 1 normal forwards;
-  }
-  @keyframes eventZProjectLinksAnimation {
-    from {
-      background-color: transparent;
-    }
-    to {
-      background-color: black;
-    }
-  }
-  #groupMember {
-    color: rgb(157, 25, 233);
-    padding: 8px;
-    font-size: 14px;
-    animation: groupMemberAnimation linear 4s 1 normal forwards;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr
   }
 }
 
