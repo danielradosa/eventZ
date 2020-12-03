@@ -12,8 +12,8 @@
 </head>
 
 <body class="body">
+<a href="home" ><div class="logo"></div></a>
 <div class="navigation">
- 
     <?php
     wp_nav_menu(array(
         'theme_location' => 'Desktop',      
@@ -28,7 +28,7 @@
         <input type="checkbox" id="toggle" />
         <label id="show-menu" for="toggle">
             <div class="btn">
-                <p>  MENU</p> 
+                <p class="mobile-nav-text">  MENU</p> 
             </div>
             <div class="btn">
             <a href="home">HOME</a>              
