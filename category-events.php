@@ -10,12 +10,11 @@
         </div>
         <!-- left Column --> 
         <div class="eventsPageColumnOne">
-          
             <!-- Events Row --> 
             <div class="eventsBlockRow">
                 <?php if (have_posts()): ?>
     	            <?php while (have_posts()): the_post()?>
-                        <div id="eventsBlock" href="<?php the_permalink()?>">
+                        <div id="eventsBlock">
                             <div id="eventsEventDate">
                                 <span class="entry-date"><?php echo get_the_date(); ?></span>
                             </div>
@@ -30,7 +29,7 @@
                  <?php endif;?>
             </div>
             <!-- Events Row End -->
-    </div>
+        </div>
     <!-- right Column --> 
      <div class="eventsPageColumnTwo">
         <div class="artistEventSidePanel">
@@ -72,7 +71,7 @@
               </div> 
                <div class="artistGenre">
                   <div id="genreName">
-                      <h1>R&B</h1>
+                      <h1>R and B</h1>
                   </div>
                   <div id="artistNameGenre">
                       <p>Barack Obana</p>
@@ -80,9 +79,6 @@
                   </div>
               </div> 
         </div>
-    </div>
-        
-        
     </div>
 </div>
 

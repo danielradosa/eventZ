@@ -1,12 +1,12 @@
 <?php get_header()?>
-<div class="singleArtistPage">
+<div class="singleEventPage">
 
-    <div id="singleArtistPostContent">
+    <div id="singleEventPostContent">
         <?php if (have_posts()): ?>
         <?php while (have_posts()): the_post()?>
-		            <div class="singleArtistPostTitle">
+		            <div class="singleEventPostTitle">
 		        <h1>
-				    <?php the_title()?></a>
+				    <?php the_title()?>
                 </h1>
                     <hr>
 		        </div>
@@ -14,6 +14,6 @@
 				<?php endwhile;?>
     <?php endif;?>
     </div>
-       <p>Artist.php</p>     
+       <p>Event.php</p>     
 </div>
 <?php get_footer()?>
