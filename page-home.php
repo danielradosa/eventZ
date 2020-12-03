@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>                   
-        <div class="home-artist">
+        <div class="home-artist">   
                 <div class="homePageTitle">
                     
                 </div>

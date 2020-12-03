@@ -12,8 +12,10 @@
 </head>
 
 <body class="body">
-<a href="home" ><div class="logo"></div></a>
+
 <div class="navigation">
+    <a href="home" >
+        <div class="logo"></div></a>
     <?php
     wp_nav_menu(array(
         'theme_location' => 'primary',      
