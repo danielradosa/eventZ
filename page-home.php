@@ -18,7 +18,7 @@ if (have_posts()) :
         <div class="spotlight" id="spotlight">
            </div>
         
-       <div class="home-artist"><div id="skew"> <div class="green"></div></div></div>
+       <div class="home-artist"><div id="skew"> <div class="green"></div><div class="audience"></div></div></div>
         
     </div>
     </div>

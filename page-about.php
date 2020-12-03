@@ -3,9 +3,9 @@
         <div class="eventZPanel">
             <div id="eventZMembers">
                 <div id="eventZMembersTitle">
-                    Who We Are
+                    About Us
                 </div>
-                <img id="eventZGroupImage" src="https://barbaraiweins.com/wp-content/uploads/2020/07/Success-Party.jpg" alt="">
+                <video src="assets/eventzBGteaser.mp4" id="eventZGroupImage"></video>
             </div>
             <div class="eventZProject">
                 A group of 4 Multimedia Designers. <br>

@@ -117,13 +117,13 @@ ul {
 #skew {
   height: 90vh;
   width: 48vh;
+  z-index: 99;
   background: url("assets/harry.png");
   animation: vertical 1s;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   pointer-events: auto;
 }
 .green {
@@ -133,9 +133,22 @@ ul {
   opacity: 1;
   transform: translate(10vmin, 80vh);
   z-index: -99;
-  background-image: linear-gradient(90deg, #1a1f2b10, #03c4a1);
-  animation: 5s horizontal-three infinite;
-  // transition: ease-in-out;
+  animation: 0.01s horizontal-three infinite;
+}
+.audience{
+  height: 200px;
+  width: 700px;
+  z-index: -99;
+  bottom: 0;
+  opacity: 0.8;
+  transform: translate(33vmin, -95px);
+  background-image: url('assets/SL3grad.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  animation: horizontal 1s;
+  animation: vertical-four 8s infinite;
 }
 .sparkles {
   animation: vertical-two 3s;
@@ -214,6 +227,14 @@ ul {
   to {
     top: -5vh;
   }
+}
+@keyframes vertical-four {
+
+  0% {background-image: url('assets/SL3grad.png');}
+  55% {background-image: url('assets/SL2grad.png');  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+  100% {background-image: url('assets/SL3grad.png');}
 }
 
 @media screen and (max-width: 600px) {
@@ -406,13 +427,18 @@ ul {
     z-index: -99;
   }
   .green {
-    height: 15vh;
+    height: 100px;
     bottom: 0;
+    opacity: 0.4;
     transform: translate(0vmin, 0vh);
     position: fixed;
   }
   .nav-link{
     display: none;
+  }
+  .audience{
+    transform: translate(0vmin, 0px);
+    width: 500px;
   }
 }
 
@@ -784,10 +810,10 @@ ul {
 /* --------------------------------------------------------------------------------------------------------  */
 
 #aboutUsPage {
-  margin: -32px 0 0 0;
-  width: 100vw;
-  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
   height: 100vh;
+  width: auto;
+  background-image: linear-gradient(32deg, #b777e8, #1a1f2b, #1a1f2b, #03c4a1);
+  overflow: hidden;
 }
 
 /* ---------------------------- About Us Styling -------------------- */
@@ -795,8 +821,8 @@ ul {
 .eventZPanel {
   height: 20vh;
   width: 80vw;
-  padding-left: 20vw;
-  padding-top: 25vh;
+
+  overflow: hidden;
 }
 
 #eventZMembersTitle {
@@ -814,7 +840,6 @@ ul {
   left: 75vw;
   height: 50vh;
   width: 20vw;
-  animation: eventZProjectAnimation linear 5s 1 normal forwards;
 }
 
 @keyframes eventZProjectAnimation {
@@ -889,16 +914,8 @@ ul {
     top: 120vh;
     left: 35vw;
     width: 50vw;
-    animation: eventZProjectAnimation linear 5s 1 normal forwards;
   }
-  @keyframes eventZProjectAnimation {
-    from {
-      top: -50vh;
-    }
-    to {
-      top: 65vh;
-    }
-  }
+
   #eventZProjectLinksTitle {
     color: rgb(25, 139, 233);
     position: absolute;
