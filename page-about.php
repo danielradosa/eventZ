@@ -5,7 +5,7 @@
             <div id="eventZMembersTitle">
                 About Us
             </div>
-            <iframe   src="https://www.youtube.com/embed/1N_KTWmCYnU?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; 
+            <iframe src="https://www.youtube.com/embed/CDQ-pcORaXg?autoplay=1&mute=1"  frameborder="0" allow="accelerometer; autoplay; 
             clipboard-write; encrypted-media;
             gyroscope; picture-in-picture"
             allowfullscreen
