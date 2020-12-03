@@ -1138,7 +1138,7 @@ ul {
 
 @media screen and (max-width: 600px) {
   #aboutUsPage {
-    height: 160vh;
+    height: 190vh;
   }
   .video {
     width: 100%;
@@ -1165,8 +1165,11 @@ ul {
   font-size: 6vh;
 }
 .eventZProjectLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   z-index: 1;
-  height: 20vh;
+  height: 40vh;
   transform: translate(-20vw, -20vh);
 }
 
